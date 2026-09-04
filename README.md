@@ -20,3 +20,5 @@ Within the framework of the current interaction with Sergey Kanivets, the author
 
 1. Reduction of Shannon Information Entropy
 In its standard operating mode, a base language model manipulates probability distributions derived from terabytes of unstructured binary text arrays, which inherently accumulates statistical noise and leads to structural hallucinations. The Shannon entropy function for the output generation tends toward maximum values, reflecting a high state of uncertainty:
+
+H(X) = — Sum ( P(xi) * log2 P(xi) )
