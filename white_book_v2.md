@@ -877,7 +877,7 @@ TIME -> LIGHT -> VEK -> ROK -> TIME
 
 whose validity is determined not by semantic association, but by the explicit equations governing temporal evolution, electromagnetic propagation, structural scaling, admissibility, boundary crossing, reversibility, and thermodynamic cost.
 
-4. THE QUANTITATIVE MODEL OF THE VEK-TO-ROK CRITICAL TRANSITION
+4) THE QUANTITATIVE MODEL OF THE VEK-TO-ROK CRITICAL TRANSITION
 
 1. THE CLOSED STATE-TRANSITION CASCADE
 
