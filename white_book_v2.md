@@ -877,3 +877,367 @@ TIME -> LIGHT -> VEK -> ROK -> TIME
 
 whose validity is determined not by semantic association, but by the explicit equations governing temporal evolution, electromagnetic propagation, structural scaling, admissibility, boundary crossing, reversibility, and thermodynamic cost.
 
+4. THE QUANTITATIVE MODEL OF THE VEK-TO-ROK CRITICAL TRANSITION
+
+1. THE CLOSED STATE-TRANSITION CASCADE
+
+The RI architecture is defined as a continuous state-transition cascade rather than as a set of independent logical branches. The system evolves along a parameterized trajectory in physical state space:
+
+TIME -> electromagnetic state evolution -> LIGHT -> structural and energetic constraint evaluation -> VEK -> critical boundary crossing -> ROK -> new system state -> subsequent temporal evolution.
+
+Let the physical state of the system be represented by the parameter vector:
+
+p = (L, rho_dof, P, T, tau, ...)
+
+where L is the characteristic structural scale, rho_dof is the density of computational degrees of freedom, P is the relevant power level, T is temperature, and tau represents a relevant temporal, propagation, or coherence scale.
+
+The electromagnetic state evolves continuously with time:
+
+psi = psi(r, t)
+
+and the corresponding state trajectory is:
+
+p(t) = (L(t), rho_dof(t), P(t), T(t), tau(t), ...).
+
+LIGHT represents the electromagnetic carrier and interaction mechanism through which the system state is physically realized. The electromagnetic state is therefore not an independent stage disconnected from TIME. It is the physical realization of temporal state evolution.
+
+At every point along the trajectory, the structural and energetic properties of the system are evaluated against defined physical constraints. This evaluation determines whether the current state remains within the admissible parameter domain.
+
+The VEK domain therefore represents the region in which the baseline RI configuration remains physically admissible.
+
+As the controlling parameter changes continuously, the system may approach the boundary of this admissible domain. When the critical boundary is reached, the baseline configuration is at its limiting condition. Further continuous displacement of the controlling parameter produces a state outside the admissible domain.
+
+That state is designated ROK.
+
+ROK therefore represents the crossing of a physical admissibility boundary rather than a Boolean instruction to select a different computational branch.
+
+Following the boundary crossing, the system must either enter a new admissible configuration or cease to satisfy the operational requirements of the architecture. Where RI provides an inverse-wave transformation capable of returning the system to a valid computational state, the resulting state becomes the initial condition for subsequent temporal evolution.
+
+The complete closed cascade is therefore:
+
+TIME
+->
+electromagnetic state evolution
+->
+LIGHT
+->
+structural and energetic constraint evaluation
+->
+VEK
+->
+critical boundary
+->
+ROK
+->
+new system state
+->
+TIME
+
+This formulation defines RI as a continuous state-space process with a closed temporal feedback structure.
+
+2. THE MATHEMATICAL DIMENSIONLESS CONSTRAINT FUNCTIONAL
+
+The central quantitative quantity of the VEK-to-ROK transition is the dimensionless constraint functional F(p).
+
+Let the physical parameter vector be:
+
+p = (L, rho_dof, P, T, tau, ...)
+
+Let C_i(p) denote an independently defined physical limitation and C_i,max denote the corresponding maximum admissible value.
+
+The normalized constraint associated with limitation i is:
+
+C_i(p) / C_i,max
+
+and the complete dimensionless constraint functional is defined as:
+
+F(p) = max [ C_i(p) / C_i,max ]
+
+The maximum operation is intentional. A system is considered admissible only while every independently imposed physical limitation remains within its corresponding bound.
+
+Examples of C_i may include:
+
+C_thermal(p) = thermal load or temperature-related constraint
+C_delay(p) = propagation-delay constraint
+C_power(p) = available or allowable power constraint
+C_loss(p) = optical propagation and coupling loss constraint
+C_error(p) = computational error constraint
+C_unitarity(p) = deviation from the required reversible transformation
+C_coherence(p) = coherence-time or phase-stability constraint
+C_density(p) = structural or degrees-of-freedom density constraint
+
+The individual constraints must be defined from physical quantities that are measurable, calculable, or independently bounded. They must not be introduced solely to produce a desired value of F.
+
+The normalization makes F dimensionless and allows physically different limitations to be evaluated on a common admissibility scale.
+
+If:
+
+F(p) < 1
+
+all defined constraints remain below their respective limits.
+
+If:
+
+F(p) = 1
+
+at least one limiting constraint has reached its admissible maximum.
+
+If:
+
+F(p) > 1
+
+at least one physical limitation has exceeded its admissible bound.
+
+The functional therefore provides a single quantitative coordinate for determining the position of a system state relative to the admissibility boundary.
+
+The use of the maximum does not imply that all physical limitations become critical simultaneously. The active constraint is the limitation for which:
+
+C_i(p) / C_i,max
+
+has the largest value.
+
+Consequently, the identity of the active constraint may change as the system moves through parameter space. The VEK-to-ROK transition is therefore determined by the first physical limitation to reach its normalized value of unity.
+
+3. THE BOUNDARY CONTINUITY CRITERION
+
+The VEK domain is formally defined as the set of all physical parameter states satisfying:
+
+F(p) <= 1
+
+Therefore:
+
+VEK = { p : F(p) <= 1 }
+
+The critical boundary is the set of states satisfying:
+
+F(p) = 1
+
+Therefore:
+
+Critical Boundary = { p : F(p) = 1 }
+
+ROK is defined as the region in which the baseline configuration exceeds at least one admissible physical limitation:
+
+ROK = { p : F(p) > 1 }
+
+The three regions are therefore ordered continuously by the value of F:
+
+F(p) < 1 -> interior of VEK
+F(p) = 1 -> critical boundary
+F(p) > 1 -> ROK
+
+The critical structural scale L_c is defined by the condition:
+
+F(L_c, rho_dof, P, T, tau, ...) = 1
+
+For fixed values of all parameters other than L, the critical scale is therefore the value at which the system trajectory intersects the critical boundary.
+
+In general, L_c is not required to be a universal constant. It may depend on the remaining physical parameters:
+
+L_c = L_c(rho_dof, P, T, tau, ...)
+
+The existence of a meaningful critical scale requires that the function F be sufficiently well-defined and continuous, or at minimum piecewise continuous, in the neighborhood of the transition.
+
+For a continuous trajectory L approaching L_c from below:
+
+lim L->L_c- F(L, ...) = 1
+
+At the critical point:
+
+F(L_c, ...) = 1
+
+For continuation beyond the critical point:
+
+lim L->L_c+ F(L, ...) >= 1
+
+and, for a genuine crossing into ROK:
+
+F(L, ...) > 1
+
+for an interval immediately beyond L_c.
+
+Under these conditions, the VEK-to-ROK transition is mathematically represented as a boundary crossing in parameter space.
+
+The boundary itself does not constitute a discontinuity in the physical state. It represents the point at which an admissibility inequality changes status.
+
+This distinction is fundamental.
+
+The mathematical classification changes at F = 1, while the underlying physical variables may continue to evolve continuously.
+
+Therefore:
+
+continuous physical trajectory + continuous constraint evaluation + threshold crossing = continuous VEK-to-ROK boundary transition.
+
+A discontinuous jump would require additional physical evidence, such as a discontinuity in the state variables, an instability, a bifurcation, or another independently established mechanism. Such behavior cannot be assumed merely from the definitions of VEK and ROK.
+
+4. PHYSICAL TRANSITION LOGIC
+
+The VEK-to-ROK transition is a scale-gradient progression, not a logical branching operation.
+
+Consider a baseline architecture in which L is the continuously varying control parameter while the remaining parameters are held fixed or vary according to a defined physical trajectory.
+
+For:
+
+L < L_c
+
+the system satisfies:
+
+F(L, ...) < 1
+
+and therefore remains within VEK.
+
+As L increases toward L_c:
+
+F(L, ... ) -> 1
+
+The system approaches the limiting condition continuously.
+
+At:
+
+L = L_c
+
+the system reaches:
+
+F(L_c, ...) = 1
+
+This is the critical boundary.
+
+The baseline configuration has not been replaced by a logical instruction. It has reached the maximum admissible value of at least one physical constraint.
+
+If the same trajectory is continued beyond the critical scale:
+
+L > L_c
+
+and the active constraint increases beyond its allowed value, then:
+
+F(L, ...) > 1
+
+The continuation of the baseline configuration is therefore physically inadmissible under the defined operating constraints.
+
+This is the formal meaning of ROK.
+
+The architecture has not selected ROK from a discrete menu of alternatives. Rather, the continuous physical trajectory has crossed the boundary of the admissible domain.
+
+The logical representation is therefore:
+
+L increasing
+->
+F increasing toward 1
+->
+F = 1
+->
+critical boundary
+->
+F > 1
+->
+baseline configuration no longer admissible
+->
+ROK
+
+and not:
+
+IF condition A
+THEN VEK
+ELSE
+THEN ROK
+
+The second formulation describes a logical branching algorithm. The first describes a physical parameter-space transition.
+
+This distinction is essential to the RI architecture.
+
+The ROK state represents the failure of the baseline configuration to remain within its defined operating domain. Consequently, a closed-loop architecture requires a transformation capable of producing a new admissible state.
+
+In the RI framework, the proposed mechanism is an inverse wave transformation based on the physical state of the electromagnetic field.
+
+For a wave state:
+
+psi(r) = A(r) exp(i phi(r))
+
+the conjugate state is:
+
+psi*(r) = A(r) exp(-i phi(r))
+
+and the phase-conjugation operation is:
+
+C : psi -> psi*
+
+The designated inverse transformation may therefore be represented as:
+
+(-Y) : psi -> psi*
+
+subject to the physical implementation conditions required for the specific photonic system.
+
+The critical point is that the existence of ROK alone does not prove that the inverse transformation will successfully restore an admissible computational state.
+
+That restoration requires an independently demonstrated physical operator capable of transforming the post-boundary state into a new state satisfying the required computational, energetic, stability, and error constraints.
+
+Accordingly, the complete closed-loop RI logic is:
+
+TIME
+->
+electromagnetic evolution
+->
+LIGHT
+->
+constraint evaluation
+->
+VEK
+->
+L increases
+->
+L approaches L_c
+->
+F approaches 1
+->
+critical boundary
+->
+F exceeds 1
+->
+ROK
+->
+inverse wave transformation
+->
+new system state
+->
+subsequent TIME evolution
+
+The inverse-wave step is therefore a proposed physical response to the boundary crossing, not a consequence that follows automatically from the definition of ROK.
+
+For the closed-loop transition to constitute a physically validated RI mechanism, three separate conditions must be demonstrated:
+
+ 1. The constraint functional F must correspond to real and independently measurable physical limitations.
+ 2. A reproducible critical boundary L_c must exist under specified operating conditions.
+ 3. The post-boundary transformation must produce a physically valid new state whose evolution can be continued within a defined admissible domain.
+
+The first two conditions establish the VEK-to-ROK transition itself.
+
+The third condition establishes whether ROK can participate in a closed reversible computational cycle.
+
+Therefore, the fundamental quantitative statement of the RI transition is:
+
+TIME provides continuous evolution.
+LIGHT provides the electromagnetic physical state.
+F(p) quantifies the distance to the active physical limitation.
+VEK defines the admissible domain.
+F(p) = 1 defines the critical boundary.
+ROK defines continuation beyond that boundary.
+The inverse wave transformation provides the proposed mechanism for generating a new computational state.
+TIME then resumes the evolution of that new state.
+
+The resulting architecture is:
+
+TIME -> LIGHT -> VEK -> ROK -> new state -> TIME
+
+with the central transition governed by:
+
+F(p) = max [ C_i(p) / C_i,max ]
+
+and the critical condition:
+
+F(L_c, ...) = 1
+
+The scientific status of this construction is conditional upon physical determination of the constraint functions, their limiting values, the existence and reproducibility of L_c, and experimental or numerical demonstration of the proposed post-boundary inverse transformation. The formalism establishes a testable model of the transition; it does not, by definition alone, constitute experimental proof of the RI architecture.
+
+
+
+
