@@ -1239,7 +1239,435 @@ F(L_c, ...) = 1
 The scientific status of this construction is conditional upon physical determination of the constraint functions, their limiting values, the existence and reproducibility of L_c, and experimental or numerical demonstration of the proposed post-boundary inverse transformation. The formalism establishes a testable model of the transition; it does not, by definition alone, constitute experimental proof of the RI architecture.
 
 
-5) FIRST NUMERICAL SCENARIO FOR THE RI WHITE BOOK V3BASELINE SILICON ARCHITECTURE CONSTRAINT FUNCTIONAL AND CRITICAL SCALE
+5) FIRST NUMERICAL SCENARIO FOR THE RI WHITE BOOK V3
+
+BASELINE SILICON ARCHITECTURE CONSTRAINT FUNCTIONAL AND CRITICAL SCALE
+
+The purpose of this numerical scenario is to define a concrete baseline constraint functional F_old for a conventional silicon architecture and determine the structural scale at which the normalized physical constraint reaches unity.
+
+The calculation uses only the specified raw parameters:
+
+P_max = 700 W
+
+L_baseline = 0.03 m
+
+A_baseline = 814 mm2 = 8.14e-4 m2
+
+kappa = 1.4 W/m*K
+
+Delta_T_max = 85 K
+
+The thermal resistance model is defined as:
+
+R_th(L) = L / (kappa*A(L))
+
+The associated temperature rise is:
+
+Delta_T(L) = P(L)*R_th(L)
+
+The baseline power density is:
+
+q_baseline = P_max/A_baseline
+
+q_baseline = 700 / 8.14e-4
+
+q_baseline = 8.5995e5 W/m2
+
+For the requested exponential density scaling, the smallest determinate normalized exponential model is adopted:
+
+q(L) = q_baseline*exp(L/L_baseline - 1)
+
+This assumption is necessary because an exponential density law requires a characteristic exponential scale. No independent exponential scale was supplied in the raw parameters, so L_baseline is used as that scale.
+
+The geometrical scaling is:
+
+A(L) = A_baseline*(L/L_baseline)^2
+
+The corresponding total power becomes:
+
+P(L) = q(L)*A(L)
+
+P(L) = P_max*(L/L_baseline)^2*exp(L/L_baseline - 1)
+
+1. THE EXPLICIT PIECEWISE FUNCTION FOR F_old
+
+The normalized power constraint is:
+
+F_power(L) = P(L)/P_max
+
+Therefore:
+
+F_power(L) = (L/L_baseline)^2*exp(L/L_baseline - 1)
+
+The baseline thermal resistance is:
+
+R_th,baseline = L_baseline/(kappa*A_baseline)
+
+R_th,baseline = 0.03/(1.4*8.14e-4)
+
+R_th,baseline = 26.3250263 K/W
+
+The baseline thermal rise is:
+
+Delta_T,baseline = P_max*R_th,baseline
+
+Delta_T,baseline = 700*26.3250263
+
+Delta_T,baseline = 18427.5184 K
+
+The normalized thermal constraint is therefore:
+
+F_thermal(L) = Delta_T(L)/Delta_T_max
+
+Substitution of the exponential power and geometric scaling gives:
+
+F_thermal(L) = 216.7943344*(L/L_baseline)*exp(L/L_baseline - 1)
+
+The baseline constraint functional is defined as the maximum of the power and thermal limitations:
+
+F_old(L) = max(F_power(L), F_thermal(L))
+
+For an explicit piecewise representation, let:
+
+x = L/L_baseline
+
+The two constraints are equal when:
+
+x^2exp(x - 1) = 216.7943344x*exp(x - 1)
+
+For positive x this occurs at:
+
+x = 216.7943344
+
+Therefore the explicit piecewise functional is:
+
+F_old(L) = 216.7943344*(L/L_baseline)*exp(L/L_baseline - 1)
+
+for 0 < L <= 216.7943344*L_baseline
+
+F_old(L) = (L/L_baseline)^2*exp(L/L_baseline - 1)
+
+for L >= 216.7943344*L_baseline
+
+The thermal constraint is therefore the active constraint throughout the physically relevant region around the baseline scale.
+
+2. THE CHOSEN BASELINE EVALUATION
+
+At the specified baseline:
+
+L = L_baseline
+
+Therefore:
+
+L/L_baseline = 1
+
+The normalized power constraint is:
+
+F_power(L_baseline) = 1
+
+The normalized thermal constraint is:
+
+F_thermal(L_baseline) = 216.7943344
+
+Consequently:
+
+F_old(L_baseline) = 216.7943344
+
+This is the decisive result of the raw-parameter calculation.
+
+The requested statement that the current H100 baseline approaches F_old = 1 is not obtained from the specified model.
+
+The model instead gives:
+
+F_old(L_baseline) = 216.7943344
+
+and therefore:
+
+F_old(L_baseline) > 1
+
+Under the defined VEK and ROK criteria:
+
+F_old < 1 -> VEK
+
+F_old = 1 -> critical boundary
+
+F_old > 1 -> ROK
+
+the specified baseline is already located inside ROK.
+
+This means that the supplied thermal model cannot legitimately be used to claim that the present H100 architecture is quantitatively close to its VEK-to-ROK critical boundary.
+
+The reason is explicit in the thermal calculation.
+
+The model combines a 30 mm characteristic length with the thermal conductivity of SiO2:
+
+R_th = 0.03/(1.4*8.14e-4)
+
+which produces:
+
+R_th = 26.3250 K/W
+
+At 700 W this produces:
+
+Delta_T = 18427.5 K
+
+which is incompatible with the stated 85 K thermal operating limit by a factor of approximately 216.8.
+
+This does not demonstrate that an H100 physically operates at an 18427 K temperature rise.
+
+It demonstrates that the assumed thermal-resistance path:
+
+R_th = L/(kappa*A)
+
+with L = 0.03 m and kappa = 1.4 W/m*K
+
+is not a physically faithful representation of the actual H100 thermal path.
+
+The calculation must therefore be treated as a mathematical stress model, not as a validated thermal model of the H100 package.
+
+3. THE DERIVATION OF L_c
+
+The critical scale is defined by:
+
+F_old(L_c) = 1
+
+Because the thermal constraint is the active constraint near the transition, the relevant equation is:
+
+216.7943344*(L_c/L_baseline)*exp(L_c/L_baseline - 1) = 1
+
+Define:
+
+x_c = L_c/L_baseline
+
+Then:
+
+216.7943344x_cexp(x_c - 1) = 1
+
+or:
+
+x_c*exp(x_c) = exp(1)/216.7943344
+
+The unique positive solution is:
+
+x_c = 0.0123842058
+
+Therefore:
+
+L_c = 0.03*0.0123842058
+
+L_c = 0.0003715262 m
+
+L_c = 0.3715262 mm
+
+Thus, under the explicitly stated exponential scaling assumption and the supplied thermal-resistance model:
+
+L_c = 0.3715262 mm
+
+At this critical scale:
+
+F_thermal(L_c) = 1
+
+while the normalized power constraint is:
+
+F_power(L_c) = 5.7124e-5
+
+Therefore the transition into ROK is thermally controlled in this model.
+
+The mathematical progression is consequently:
+
+L < 0.3715262 mm -> VEK
+
+L = 0.3715262 mm -> critical boundary
+
+L > 0.3715262 mm -> ROK
+
+for the specified parameter trajectory.
+
+However, because the baseline H100 scale is:
+
+L_baseline = 30 mm
+
+and:
+
+30 mm > 0.3715262 mm
+
+the baseline point is already far beyond the calculated critical scale.
+
+The ratio is:
+
+L_baseline/L_c = 80.747 approximately
+
+Therefore this particular raw model does not establish a future H100 transition toward ROK.
+
+It mathematically places the supplied baseline point deep inside ROK.
+
+This result must not be altered by redefining the threshold after the calculation.
+
+A different value of L_c requires a different and physically justified thermal model, not a numerical adjustment of the present one.
+
+4. THE 2-MODE PHOTONIC REPLACEMENT METRIC
+
+The RI two-mode replacement is evaluated under the same nominal spatial envelope but with the computational transformation represented by a two-mode optical state vector.
+
+Let:
+
+a = a1,a2
+
+be the normalized two-mode input state.
+
+The ideal reversible transformation is represented by a unitary matrix:
+
+U_2 =
+
+cos(theta) sin(theta)
+
+-sin(theta) cos(theta)
+
+with:
+
+U_2^dagger*U_2 = I
+
+The ideal transformation therefore introduces no logical irreversibility.
+
+The corresponding irreversible operation count is:
+
+N_irr,RI = 0
+
+in the ideal reversible limit.
+
+The Landauer-associated irreversible power is:
+
+P_irr,RI = N_irr,RIk_BT*ln(2)
+
+Therefore:
+
+P_irr,RI = 0
+
+in the ideal mathematical limit.
+
+For the corresponding baseline irreversible computation:
+
+P_irr,old = N_irr,oldk_BT*ln(2)
+
+and therefore the mathematical reduction in the logical irreversibility term is:
+
+Delta_P_irr = P_irr,old - P_irr,RI
+
+Delta_P_irr = P_irr,old
+
+provided that the RI transformation actually eliminates those irreversible operations.
+
+Equivalently:
+
+P_irr,RI/P_irr,old = 0
+
+in the ideal reversible model.
+
+This is the mathematical drop in the logical irreversibility component.
+
+It is not equivalent to saying that the complete photonic device consumes zero power.
+
+For a physical two-mode scattering transformation S_2, the optical loss must instead be defined from the actual transmitted state:
+
+P_loss,RI(a) = P_in*(1 - ||S_2*a||^2)
+
+for a normalized input state with:
+
+||a|| = 1
+
+The non-unitarity of the physical transformation is quantified by:
+
+Delta_U = ||I - S_2^dagger*S_2||
+
+For an ideal lossless transformation:
+
+Delta_U = 0
+
+and:
+
+P_loss,RI = 0
+
+For a real device:
+
+Delta_U > 0
+
+and:
+
+P_loss,RI > 0
+
+in general.
+
+The total physical power required by the RI implementation must therefore be separated into distinct terms:
+
+P_total,RI = P_prop + P_scatt + P_coupling + P_control + P_phase_conjugation + P_detection + P_irr
+
+The ideal reversible result applies only to:
+
+P_irr
+
+It does not automatically eliminate:
+
+P_prop
+
+P_scatt
+
+P_coupling
+
+P_control
+
+P_phase_conjugation
+
+or
+
+P_detection
+
+Therefore, the scientifically valid conclusion from the two-mode model is:
+
+The RI representation can mathematically reduce the logical irreversibility term from a nonzero Landauer-associated value to zero in the ideal reversible limit, while total physical optical and control losses remain nonzero and must be independently measured or modeled.
+
+5. TECHNICAL INTERPRETATION OF THE FIRST NUMERICAL SCENARIO
+
+The first numerical scenario produces two separate results.
+
+First, the baseline constraint calculation is mathematically determinate under the specified assumptions.
+
+It gives:
+
+F_old(L_baseline) = 216.7943344
+
+and:
+
+L_c = 0.3715262 mm
+
+Second, this result exposes a physical inconsistency in the chosen baseline thermal model.
+
+The model does not reproduce an H100 operating point near F_old = 1.
+
+Instead, it predicts a thermal constraint more than two hundred times above the stated allowable temperature difference.
+
+Therefore the present F_old formulation cannot yet serve as a physically calibrated H100 baseline.
+
+The numerical result remains useful because it identifies the precise point at which the model fails calibration.
+
+The correct engineering interpretation is:
+
+The mathematical VEK-to-ROK mechanism is well-defined.
+
+The current H100 parameter substitution does not validate the selected thermal model.
+
+The calculated L_c is therefore a model-dependent critical scale, not an experimentally established H100 physical threshold.
+
+The two-mode RI replacement demonstrates a mathematically reversible transformation and a zero logical-irreversibility term in the ideal limit.
+
+It does not by itself establish lower total wall-plug energy than the silicon baseline.
+
+Accordingly, this scenario supports the formal structure:
+
+TIME -> LIGHT -> constraint evaluation -> VEK -> critical boundary -> ROK -> new state -> TIME
+
+but it does not provide evidence that the real H100 architecture is presently located at the VEK-to-ROK boundary.
+
+The next physically rigorous version of F_old must replace the assumed 30 mm SiO2 thermal path with the actual heat-flow path and measured or independently sourced thermal resistance of the complete silicon/package/cooling stack. Only after that calibration can L_c be interpreted as a physical hardware threshold rather than a mathematical threshold of the present simplified model.
 
 
 
