@@ -879,7 +879,7 @@ whose validity is determined not by semantic association, but by the explicit eq
 
 4) THE QUANTITATIVE MODEL OF THE VEK-TO-ROK CRITICAL TRANSITION
 
-1. THE CLOSED STATE-TRANSITION CASCADE
+4.1. THE CLOSED STATE-TRANSITION CASCADE
 
 The RI architecture is defined as a continuous state-transition cascade rather than as a set of independent logical branches. The system evolves along a parameterized trajectory in physical state space:
 
@@ -935,7 +935,7 @@ TIME
 
 This formulation defines RI as a continuous state-space process with a closed temporal feedback structure.
 
-2. THE MATHEMATICAL DIMENSIONLESS CONSTRAINT FUNCTIONAL
+4.2. THE MATHEMATICAL DIMENSIONLESS CONSTRAINT FUNCTIONAL
 
 The central quantitative quantity of the VEK-to-ROK transition is the dimensionless constraint functional F(p).
 
@@ -998,7 +998,7 @@ has the largest value.
 
 Consequently, the identity of the active constraint may change as the system moves through parameter space. The VEK-to-ROK transition is therefore determined by the first physical limitation to reach its normalized value of unity.
 
-3. THE BOUNDARY CONTINUITY CRITERION
+4.3. THE BOUNDARY CONTINUITY CRITERION
 
 The VEK domain is formally defined as the set of all physical parameter states satisfying:
 
@@ -1070,7 +1070,7 @@ continuous physical trajectory + continuous constraint evaluation + threshold cr
 
 A discontinuous jump would require additional physical evidence, such as a discontinuity in the state variables, an instability, a bifurcation, or another independently established mechanism. Such behavior cannot be assumed merely from the definitions of VEK and ROK.
 
-4. PHYSICAL TRANSITION LOGIC
+4.4. PHYSICAL TRANSITION LOGIC
 
 The VEK-to-ROK transition is a scale-gradient progression, not a logical branching operation.
 
@@ -1289,7 +1289,7 @@ P(L) = q(L)*A(L)
 
 P(L) = P_max*(L/L_baseline)^2*exp(L/L_baseline - 1)
 
-1. THE EXPLICIT PIECEWISE FUNCTION FOR F_old
+5.1. THE EXPLICIT PIECEWISE FUNCTION FOR F_old
 
 The normalized power constraint is:
 
@@ -1351,7 +1351,7 @@ for L >= 216.7943344*L_baseline
 
 The thermal constraint is therefore the active constraint throughout the physically relevant region around the baseline scale.
 
-2. THE CHOSEN BASELINE EVALUATION
+5.2. THE CHOSEN BASELINE EVALUATION
 
 At the specified baseline:
 
@@ -1425,7 +1425,7 @@ is not a physically faithful representation of the actual H100 thermal path.
 
 The calculation must therefore be treated as a mathematical stress model, not as a validated thermal model of the H100 package.
 
-3. THE DERIVATION OF L_c
+5.3. THE DERIVATION OF L_c
 
 The critical scale is defined by:
 
@@ -1505,7 +1505,7 @@ This result must not be altered by redefining the threshold after the calculatio
 
 A different value of L_c requires a different and physically justified thermal model, not a numerical adjustment of the present one.
 
-4. THE 2-MODE PHOTONIC REPLACEMENT METRIC
+5.4. THE 2-MODE PHOTONIC REPLACEMENT METRIC
 
 The RI two-mode replacement is evaluated under the same nominal spatial envelope but with the computational transformation represented by a two-mode optical state vector.
 
@@ -1625,7 +1625,7 @@ Therefore, the scientifically valid conclusion from the two-mode model is:
 
 The RI representation can mathematically reduce the logical irreversibility term from a nonzero Landauer-associated value to zero in the ideal reversible limit, while total physical optical and control losses remain nonzero and must be independently measured or modeled.
 
-5. TECHNICAL INTERPRETATION OF THE FIRST NUMERICAL SCENARIO
+5.5. TECHNICAL INTERPRETATION OF THE FIRST NUMERICAL SCENARIO
 
 The first numerical scenario produces two separate results.
 
