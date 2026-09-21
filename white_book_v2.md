@@ -1670,7 +1670,7 @@ but it does not provide evidence that the real H100 architecture is presently lo
 The next physically rigorous version of F_old must replace the assumed 30 mm SiO2 thermal path with the actual heat-flow path and measured or independently sourced thermal resistance of the complete silicon/package/cooling stack. Only after that calibration can L_c be interpreted as a physical hardware threshold rather than a mathematical threshold of the present simplified model.
 
 
-6). MULTI-LAYER THERMAL TRANSPORT AND THE OPERATIONAL VEK-TO-ROK BOUNDARY
+6. MULTI-LAYER THERMAL TRANSPORT AND THE OPERATIONAL VEK-TO-ROK BOUNDARY
 
 6.1 Scope of the Extended Thermal Model
 
