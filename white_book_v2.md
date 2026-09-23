@@ -2605,7 +2605,7 @@ This Section therefore establishes a physically consistent thermal foundation fo
 
 7. THE COHERENT PHASE-CONJUGATION ARCHITECTURE OF REALISTIC INTELLIGENCE
    
-7.1 Scope and Evidence Discipline
+7.1. Scope and Evidence Discipline
 
 Section 7 formalizes the proposed operational architecture of Realistic Intelligence (RI) through coherent phase conjugation of electromagnetic states in a three-dimensional periodic photonic structure.
 
@@ -2625,7 +2625,7 @@ A physical property that cannot be established by mathematical derivation alone 
 
 The purpose of this classification is to prevent a mathematical property of an idealized field from being presented as an experimentally demonstrated property of RI hardware.
 
-7.2 Continuous Wave-Matrix State
+7.2. Continuous Wave-Matrix State
 
 Let the electromagnetic computational state be represented by a complex vector field:
 
@@ -2665,7 +2665,7 @@ The corresponding electromagnetic modes satisfy Maxwell's equations and may be r
 
 This establishes the physical field framework in which the proposed RI transformation operates.
 
-7.3 DERIVED MATHEMATICALLY: Phase-Conjugation Operator (-Y)
+7.3. DERIVED MATHEMATICALLY: Phase-Conjugation Operator (-Y)
 
 Within the RI formalism, the symbol "-Y" is defined as the phase-conjugation operation.
 
@@ -2701,7 +2701,7 @@ Complex conjugation of a field is not, by itself, a proof that a complete physic
 
 The RI designation "-Y" therefore represents a proposed computational operation and must not be interpreted as an established physical law.
 
-7.4 Operator Fidelity
+7.4. Operator Fidelity
 
 For an ideal target phase-conjugated state:
 
@@ -2748,7 +2748,7 @@ This constitutes a DERIVED MATHEMATICALLY result.
 
 It does not constitute experimental evidence that a physical photonic device can perform the transformation with F_Y = 1.
 
-7.5 Periodic Three-Dimensional Wave Matrix
+7.5. Periodic Three-Dimensional Wave Matrix
 
 The electromagnetic field in the proposed RI medium is governed by Maxwell's equations:
 
@@ -2784,7 +2784,7 @@ MODEL-LEVEL VALIDATION:
 
 The actual values of resonance frequency, bandwidth, propagation loss, mode coupling, phase-conjugation efficiency, and field fidelity must be calculated for a specified geometry and material system.
 
-7.6 MODEL-LEVEL VALIDATION: Coherent Energy Transfer
+7.6. MODEL-LEVEL VALIDATION: Coherent Energy Transfer
 
 An idealized phase-conjugation process can be represented by:
 
@@ -2820,7 +2820,7 @@ physical energy consumption.
 
 This distinction is required by thermodynamics.
 
-7.7 Logical Irreversibility and the Landauer Limit
+7.7. Logical Irreversibility and the Landauer Limit
 
 For a logically irreversible operation that erases N_irr bits per unit time, the Landauer lower bound is:
 
@@ -2854,7 +2854,7 @@ may remain true because of optical pumping, nonlinear conversion, control electr
 
 Finite-time operation can also carry additional nonequilibrium dissipation beyond the equilibrium Landauer term.
 
-7.8 MODEL-LEVEL VALIDATION: Localized Phonon Generation
+7.8. MODEL-LEVEL VALIDATION: Localized Phonon Generation
 
 The total thermal source associated with the phase-conjugation layer may be represented as:
 
@@ -2894,7 +2894,7 @@ Whether the total thermal load is reduced is an independent engineering question
 
 This distinction prevents the RI model from incorrectly identifying logical reversibility with zero physical heating.
 
-7.9 Optical Reachability Criterion
+7.9. Optical Reachability Criterion
 
 The optical propagation velocity inside a material is not equal to the vacuum speed of light.
 
@@ -2936,7 +2936,7 @@ This means that the optical state can, in principle, reach the relevant observat
 
 The criterion is causal and quantitative rather than instantaneous.
 
-7.10 Human-System Coupling
+7.10. Human-System Coupling
 
 The four-domain RI architecture does not establish direct human access to the electromagnetic state merely because electromagnetic propagation is fast.
 
@@ -2983,7 +2983,7 @@ tau_loop = 0
 
 This correction is essential for physical realism.
 
-7.11 EXPERIMENTAL VALIDATION RECOGNITION
+7.11. EXPERIMENTAL VALIDATION RECOGNITION
 
 The following parameters cannot be established by the mathematical definition of "-Y":
 
@@ -3031,7 +3031,7 @@ The correct statement is:
 
 "the specified model admits an approximately ideal phase-conjugation transformation under the stated assumptions."
 
-7.12 Four-Domain Invariant
+7.12. Four-Domain Invariant
 
 The calibrated RI architecture is represented by the continuous sequence:
 
@@ -3075,7 +3075,7 @@ VEK -> ROK
 
 is therefore a boundary crossing rather than a logical alternative or branching choice.
 
-7.13 Inverse-Wave Transition
+7.13. Inverse-Wave Transition
 
 The proposed inverse-wave mechanism is represented by:
 
@@ -3123,7 +3123,7 @@ It is a proposed physical mechanism for restoring or transforming the computatio
 
 This distinction preserves the causal structure without converting the RI hypothesis into an unsupported physical claim.
 
-7.14 Constraint Functional
+7.14. Constraint Functional
 
 All operational requirements may be incorporated into the dimensionless constraint functional:
 
@@ -3163,7 +3163,7 @@ F(L_c, other parameters) = 1
 
 provided that the specified physical model gives a well-defined continuous dependence of F on L.
 
-7.15 Falsification Conditions
+7.15. Falsification Conditions
 
 The RI phase-conjugation hypothesis remains falsifiable.
 
@@ -3205,7 +3205,7 @@ sufficient conversion efficiency
 
 and a reproducible system-level advantage relative to a clearly defined baseline.
 
-7.16 Final Technical Classification
+7.16. Final Technical Classification
 
 The status of the Section 7 architecture is therefore:
 
@@ -3263,7 +3263,7 @@ complete feedback-loop latency
 
 and system-level computational advantage.
 
-7.17 Final Statement
+7.17. Final Statement
 
 The mathematically defensible RI proposition is not that phase conjugation produces zero-energy computation or instantaneous human control.
 
