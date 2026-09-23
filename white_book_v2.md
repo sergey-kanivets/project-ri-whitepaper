@@ -1672,7 +1672,7 @@ The next physically rigorous version of F_old must replace the assumed 30 mm SiO
 
 6. MULTI-LAYER THERMAL TRANSPORT AND THE OPERATIONAL VEK-TO-ROK BOUNDARY
 
-6.1 Scope of the Extended Thermal Model
+6.1. Scope of the Extended Thermal Model
 
 Section 5 established a one-dimensional thermal stress model. Section 6 replaces the single effective thermal-resistance approximation with an explicit multilayer transport stack consisting of the silicon die, a high-performance liquid-metal thermal interface material, a copper integrated heat spreader, and an active convective cooling boundary.
 
@@ -1688,7 +1688,7 @@ The model does not assume that an arbitrarily large external coolant flow elimin
 
 Thermal boundary resistance is a recognized component of solid-solid and solid-liquid heat transport and can become important as device dimensions decrease.
 
-6.2 Physical Architecture
+6.2. Physical Architecture
 
 The thermal stack is defined as follows:
 
@@ -1754,7 +1754,7 @@ R_interface = 0
 
 This is an optimistic lower-bound thermal model, not a complete package-level thermal characterization.
 
-6.3 Infinite-Cooling Limit
+6.3. Infinite-Cooling Limit
 
 The idealized infinite-flow condition corresponds mathematically to:
 
@@ -1801,7 +1801,7 @@ The multilayer stack does not support a claim that the baseline 700 W architectu
 It instead establishes a finite internal thermal margin that can subsequently be consumed by scaling, localized heat generation, interfacial resistance, or reduced effective thermal conductivity.
 
 
-6.4 Transient Multilayer Heat-Conduction Model
+6.4. Transient Multilayer Heat-Conduction Model
 
 Let T_si(r,t), T_tim(r,t), and T_cu(r,t) denote the temperatures in the silicon, TIM, and copper regions.
 
@@ -1894,7 +1894,7 @@ throughout the entire stack.
 The internal layer resistances remain finite.
 
 
-6.5 Localized Landauer Heat-Generation Source
+6.5. Localized Landauer Heat-Generation Source
 
 Logical irreversibility is represented by a finite irreversible operation rate.
 
@@ -1945,7 +1945,7 @@ However, this removes only the logically irreversible contribution. It does not 
 Actual photonic, electronic, coupling, control, detection, scattering, and thermal losses remain independent physical terms.
 
 
-6.6 Exponential Parameter Scaling
+6.6. Exponential Parameter Scaling
 
 To obtain an explicit structural scaling law, define the dimensionless structural coordinate:
 
@@ -1993,7 +1993,7 @@ from:
 
 exponential computational-density scaling.
 
-6.7 Thermal Constraint Functional
+6.7. Thermal Constraint Functional
 
 For the extended architecture, the principal thermal constraint is:
 
@@ -2050,7 +2050,7 @@ F(p) > 1
 
 This preserves the four-domain invariant structure established in the previous section.
 
-6.8 Thermal Scale Boundary Under the Specified Multilayer Stack
+6.8. Thermal Scale Boundary Under the Specified Multilayer Stack
 
 For the numerical thermal envelope, first consider the idealized case in which the total heat load is uniformly represented by the 700 W baseline power and the thermal stack scales geometrically with area.
 
@@ -2129,7 +2129,7 @@ It is not an experimentally established critical size of a real processor.
 More importantly, it demonstrates that the optimized thermal stack changes the result qualitatively relative to the single-layer model.
 
 
-6.9 Alternative Localized-Source Scaling
+6.9. Alternative Localized-Source Scaling
 
 The preceding envelope treats the 700 W load as the effective heat load and therefore provides a structural stress boundary.
 
@@ -2176,7 +2176,7 @@ Therefore an exact numerical Landauer-driven L_c would be underdetermined at thi
 Assigning a numerical value without these quantities would constitute parameter invention rather than engineering analysis.
 
 
-6.10 Acoustic Propagation and the Quasi-Ballistic Criterion
+6.10. Acoustic Propagation and the Quasi-Ballistic Criterion
 
 The statement that thermal accumulation "outpaces acoustic phonon propagation" requires a dimensional correction.
 
@@ -2250,7 +2250,7 @@ F_ballistic(L) = Kn(L)
 
 as a transport-regime indicator rather than incorrectly identifying acoustic velocity itself as the ballistic threshold.
 
-6.11 Unified Thermal and Transport Constraint
+6.11. Unified Thermal and Transport Constraint
 
 The extended functional can therefore include both thermal accumulation and transport-regime limits:
 
@@ -2282,7 +2282,7 @@ The resulting physical state remains in VEK only while all independently establi
 
 F(p) <= 1
 
-6.12 Why Infinite Coolant Flow Does Not Remove the Internal Boundary
+6.12. Why Infinite Coolant Flow Does Not Remove the Internal Boundary
 
 Consider the limiting case:
 
@@ -2328,7 +2328,7 @@ The remaining internal conduction and interface limitations persist.
 
 This is the fundamental reason that an ideal cooling boundary cannot, by itself, guarantee unlimited computational scaling.
 
-6.13 Four-Domain Classification
+6.13. Four-Domain Classification
 
 The extended physical architecture remains governed by the invariant sequence:
 
@@ -2372,7 +2372,7 @@ The system does not "choose" ROK.
 
 The system reaches ROK when continuation of the baseline architecture violates at least one physical constraint.
 
-6.14 Operational Unreachability of the Baseline Binary Path
+6.14. Operational Unreachability of the Baseline Binary Path
 
 The term "physically unreachable" must be defined in engineering terms.
 
@@ -2414,7 +2414,7 @@ It establishes only that the specified baseline architecture, under the specifie
 
 This distinction is necessary for technical and patent defensibility.
 
-6.15 Consequence for the RI Inverse Wave Matrix
+6.15. Consequence for the RI Inverse Wave Matrix
 
 Once:
 
@@ -2474,7 +2474,7 @@ and state-recovery error.
 
 The present section establishes only the thermal and transport necessity for such a transition.
 
-6.16 Engineering Interpretation of the Multilayer Result
+6.16. Engineering Interpretation of the Multilayer Result
 
 The optimized multilayer stack produces the following numerical baseline:
 
@@ -2526,7 +2526,7 @@ For the localized Landauer source, an exact L_c remains underdetermined until th
 
 This distinction is critical.
 
-6.17 Final Physical Statement
+6.17. Final Physical Statement
 
 The multilayer thermal model establishes the following hierarchy:
 
