@@ -3284,6 +3284,811 @@ The mathematical existence of this operator is established by definition and com
 Its usefulness as an RI hardware mechanism remains an experimentally testable hypothesis.
 
 
+8. PRACTICAL OPTICAL LABORATORY TESTBED FOR RI PHASE-CONJUGATION VALIDATION
+   
+8.1. Experimental Objective
+
+The first physical RI experiment shall not attempt to demonstrate a complete three-dimensional computational processor.
+
+The first objective is narrower and experimentally decisive:
+
+1. Generate a known optical input wavefront.
+2. Produce a phase-conjugated output through a physically established nonlinear optical mechanism.
+3. Measure the output wavefront independently.
+4. Quantify phase-conjugation fidelity.
+5. Measure all relevant optical powers.
+6. Determine whether the observed output is consistent with phase conjugation rather than ordinary reflection, scattering, or linear optical distortion.
+7.Repeat the measurement with controlled changes to the input wavefront.
+
+This experiment tests the physical precursor of the proposed RI operation. It does not, by itself, establish the complete RI architecture or an engineering advantage over electronic computation.
+
+A practical first implementation should use the visible 632.8 nm wavelength rather than attempting to force the first experiment to 100 THz. Published experiments have demonstrated photorefractive phase conjugation and four-wave mixing in BaTiO3 at visible wavelengths, including 514.5 nm and 632.8 nm-class operation.
+
+The 100 THz RI carrier therefore remains a separate future experimental question rather than an assumption built into this first laboratory test.
+
+8.2. Recommended First Test Configuration
+
+The recommended first laboratory configuration is:
+
+Laser wavelength:
+
+632.8 nm
+
+Laser mode:
+
+continuous wave
+
+Initial optical power:
+
+approximately 1 to 10 mW at the experimental input plane
+
+Input polarization:
+
+linear and stable
+
+Nonlinear medium:
+
+photorefractive BaTiO3 crystal
+
+Primary process:
+
+photorefractive four-wave mixing / phase conjugation
+
+Input wavefront:
+
+initially a simple Gaussian beam, followed by controlled spatial phase patterns
+
+Output measurement:
+
+power measurement plus independent wavefront measurement
+
+This configuration is deliberately conservative.
+
+Published experiments have demonstrated phase-conjugate reflection in BaTiO3 and have measured phase-conjugate reflectivity and four-wave-mixing response under laboratory conditions. One reported BaTiO3:Co experiment used 514.5 nm light and 25 mW input power, while other experiments have demonstrated near-infrared operation around 1.06 micrometers.
+
+The purpose of selecting 632.8 nm is therefore not to claim that this wavelength is optimal for RI. It is to establish a physically documented phase-conjugation mechanism before increasing architectural complexity.
+
+8.3. Laser Source
+
+A practical source may be a laboratory He-Ne laser at 632.8 nm.
+
+A suitable class of commercial source is a linearly polarized continuous-wave He-Ne laser with approximately 2 mW output.
+
+Thorlabs has historically offered the HNL020LB class of 632.8 nm linearly polarized He-Ne sources, although that particular model is discontinued; equivalent current laboratory He-Ne sources should be selected from an active supplier. The relevant historical specification confirms 632.8 nm operation and linearly polarized output.
+
+For a current semiconductor alternative, a temperature- and current-controlled single-frequency source can also be used. The critical requirement is not the manufacturer but:
+
+stable wavelength
+
+stable polarization
+
+single spatial mode
+
+stable continuous-wave output
+
+and sufficient coherence for the chosen phase-conjugation geometry.
+
+The laser power shall be measured before every experimental run.
+
+The source shall not be operated at its maximum rating merely because greater optical power is available.
+
+8.4. Nonlinear Optical Medium
+
+The first candidate crystal shall be:
+
+BaTiO3
+
+preferably a documented photorefractive grade appropriate to 632.8 nm operation.
+
+BaTiO3 is not being selected speculatively. Photorefractive BaTiO3 has a long experimental history in two-beam coupling, four-wave mixing, and phase-conjugate mirror configurations.
+
+The crystal specification shall include, before purchase:
+
+crystal composition
+
+dopant concentration
+
+crystal dimensions
+
+optic-axis orientation
+
+surface quality
+
+anti-reflection coating, if any
+
+specified wavelength range
+
+photorefractive response data
+
+and recommended operating intensity.
+
+The crystal orientation cannot be treated as an arbitrary mounting detail. Published measurements show that phase-conjugate reflectivity and response time depend strongly on crystal orientation and beam geometry.
+
+The laboratory record shall therefore identify the crystal orientation explicitly.
+
+8.5. Optical Table and Mechanical Infrastructure
+
+The optical system shall be constructed on a vibration-isolated optical table.
+
+Required infrastructure:
+
+optical table
+
+kinematic mirror mounts
+
+translation stages
+
+rotation stages
+
+lens mounts
+
+iris mounts
+
+beam dumps
+
+beam-height reference
+
+post holders
+
+optical posts
+
+and enclosed beam paths wherever practical.
+
+The crystal shall be mounted on a stable rotation stage allowing controlled adjustment of its orientation.
+
+The purpose is not merely convenience.
+
+Phase-conjugation measurements can be sensitive to beam geometry, angular alignment, and competing optical paths. Published BaTiO3 experiments specifically report dependence of phase-conjugate behavior on beam geometry and alignment.
+
+8.6. Beam Splitting and Routing
+
+For a 632.8 nm system, a suitable commercial beamsplitter class is the 400 to 700 nm 50:50 cube.
+
+For example:
+
+Thorlabs BS013
+
+25.4 mm 50:50 beamsplitter cube
+
+400 to 700 nm coating range.
+
+The beamsplitter shall divide the stabilized laser output into independently controllable optical paths.
+
+The optical paths shall contain:
+
+mirror
+
+iris
+
+polarization control
+
+beam-expansion optics
+
+power monitoring
+
+and final focusing or collimation optics.
+
+The actual pump-to-signal intensity ratio shall be measured rather than inferred from nominal component specifications.
+
+8.7. Polarization Control
+
+Each independently controlled optical path should contain:
+
+linear polarizer
+
+half-wave plate
+
+quarter-wave plate where required
+
+and suitable rotation mounts.
+
+The polarization state entering the crystal shall be recorded.
+
+The experiment shall not assume that the nonlinear interaction is polarization independent.
+
+Photorefractive crystals are anisotropic and their optical response depends on polarization and crystal orientation.
+
+A controlled polarization sweep should therefore be included in the experimental characterization.
+
+8.8. Spatial Wavefront Encoding
+
+For the initial experiment, a spatial light modulator is optional.
+
+The first measurement should establish phase conjugation using a simple Gaussian input.
+
+Only after that measurement is reproduced should controlled phase patterns be introduced.
+
+A practical 632.8 nm-capable SLM is available from Hamamatsu's LCOS-SLM X15213 series. The X15213-01 is specified for 400 to 700 nm and has been characterized at 633 nm. The device provides phase-only modulation with 1272 x 1024 pixels and approximately 12.5 micrometer pixel pitch.
+
+The SLM may subsequently generate:
+
+tilted wavefronts
+
+defocus
+
+astigmatism
+
+low-order aberrations
+
+phase gratings
+
+and arbitrary test patterns.
+
+The SLM must not be treated as part of the nonlinear phase-conjugation proof itself.
+
+It is an input-state generator.
+
+This distinction is essential.
+
+
+8.9. Wavefront Diagnostics
+
+The phase-conjugated output shall be measured independently of the device used to generate the input pattern.
+
+A Shack-Hartmann wavefront sensor is suitable for this purpose.
+
+Commercial Shack-Hartmann systems cover the visible wavelength range and provide spatial measurements of wavefront deviation and intensity distribution. Thorlabs documentation describes systems covering approximately 300 to 1100 nm, including configurations suitable for 632.8 nm operation.
+
+The diagnostic chain should therefore contain:
+
+phase-conjugated output
+
+attenuator
+
+imaging optics
+
+Shack-Hartmann sensor
+
+and independent power detector.
+
+The attenuator is mandatory whenever the measured optical power exceeds the detector's specified operating range.
+
+8.10. Optical Power Measurement
+
+At minimum, three independent power measurements are required:
+
+P_in
+
+P_pc
+
+P_background
+
+where:
+
+P_in = incident signal power
+
+P_pc = phase-conjugated output power
+
+P_background = detector/background signal with the nonlinear interaction removed.
+
+A suitable visible photodiode power sensor is the Thorlabs S120VC class, specified for 200 to 1100 nm operation, or an appropriate silicon detector covering the actual power range.
+
+For faster temporal measurements, an amplified silicon detector such as the PDA10A2 class provides 200 to 1100 nm response and bandwidth suitable for monitoring optical fluctuations.
+
+Power meters shall be calibrated before the experiment.
+
+The detector shall never be used outside its specified optical power and wavelength range.
+
+8.11. Spectral Diagnostics
+
+A spectrometer or optical spectrum analyzer covering the 632.8 nm region should be used to verify:
+
+input wavelength
+
+output wavelength
+
+unwanted nonlinear products
+
+background fluorescence
+
+and spectral broadening.
+
+The spectral measurement is not optional if the experiment is later interpreted as a nonlinear optical process.
+
+A power increase at the expected output direction alone does not prove phase conjugation.
+
+8.12. Initial Optical Alignment
+
+The alignment shall proceed in the following order.
+
+Step 1
+
+Align the laser beam to a fixed laboratory reference height.
+
+Step 2
+
+Verify the beam is spatially stable and approximately collimated.
+
+Step 3
+
+Measure the input optical power before inserting the nonlinear crystal.
+
+Step 4
+
+Insert the beamsplitter and establish the independent optical paths.
+
+Step 5
+
+Align each path independently using irises and reference targets.
+
+Step 6
+
+Insert polarization optics.
+
+Step 7
+
+Measure and record polarization for each path.
+
+Step 8
+
+Mount the BaTiO3 crystal on the rotation stage.
+
+Step 9
+
+Determine the crystal orientation from the manufacturer's crystal documentation.
+
+Step 10
+
+Introduce the beams into the crystal at the geometry specified for the selected phase-conjugation configuration.
+
+The precise crossing geometry must be determined from the actual crystal cut and nonlinear configuration.
+
+It shall not be invented from a generic diagram.
+
+Published experiments demonstrate that phase-conjugate reflectivity depends on beam angle and crystal orientation.
+
+8.13. Establishing the Baseline
+
+Before attempting phase conjugation, record:
+
+laser output power
+
+background detector signal
+
+power in each optical path
+
+crystal transmission
+
+detector response
+
+input beam profile
+
+input wavefront
+
+and input polarization.
+
+Then perform a control measurement with the nonlinear interaction disabled.
+
+Possible controls include:
+
+removing the crystal
+
+blocking one pump path
+
+changing crystal orientation
+
+reducing pump intensity
+
+or changing polarization.
+
+The purpose of the control measurements is to establish that the measured reverse-propagating field is not simply:
+
+ordinary reflection
+
+Fresnel reflection
+
+scattering
+
+or detector cross-talk.
+
+8.14. Establishing Phase Conjugation
+
+The signal beam shall first be passed through the nonlinear interaction under the selected BaTiO3 configuration.
+
+The reverse-propagating output shall be isolated spatially from the input beam.
+
+The output shall then be measured simultaneously by:
+
+power detector
+
+wavefront sensor
+
+and, where practical, camera or spectrometer.
+
+The experiment shall be repeated with the input wavefront changed.
+
+A successful phase-conjugation signature requires the output wavefront to reproduce the conjugated spatial phase structure rather than merely reproduce the output intensity pattern.
+
+8.15. Phase-Conjugation Fidelity Measurement
+
+The input wavefront shall first be measured independently.
+
+Let the measured complex input field be:
+
+E_in(x,y)
+
+The experimentally reconstructed phase-conjugated target is:
+
+E_target(x,y) = E_in*(x,y)
+
+The measured output field is:
+
+E_out(x,y)
+
+The normalized phase-conjugation fidelity shall then be calculated from the complex field overlap:
+
+F_Y =
+|integral E_out(x,y) E_target*(x,y) dx dy|^2
+/
+[integral |E_out(x,y)|^2 dx dy
+multiplied by
+integral |E_target(x,y)|^2 dx dy]
+
+The exact implementation shall use the experimentally reconstructed complex field and identical spatial normalization for the two fields.
+
+The experiment shall report:
+
+F_Y
+
+uncertainty in F_Y
+
+spatial sampling
+
+field reconstruction method
+
+and calibration procedure.
+
+A high intensity correlation without phase information shall not be reported as phase-conjugation fidelity.
+
+8.16. Distinguishing Phase Conjugation from Ordinary Reflection
+
+The experiment shall include at least three discriminating tests.
+
+Test A: Wavefront inversion
+
+Apply a deliberately distorted input phase pattern.
+
+Measure the output phase.
+
+Ordinary reflection should preserve the appropriate propagation transformation rather than generate the required phase-conjugated field.
+
+Test B: Crystal removal
+
+Remove the nonlinear medium.
+
+Measure the reverse-propagating field.
+
+This establishes the linear optical background.
+
+Test C: Nonlinear interaction suppression
+
+Reduce or block the pump/interacting beam.
+
+Measure the reverse output.
+
+The phase-conjugated component should disappear or decrease consistently with the nonlinear interaction.
+
+Only the nonlinear-dependent component shall be attributed to the phase-conjugation mechanism.
+
+8.17. Optical Energy Balance
+
+The complete optical balance shall be recorded as:
+
+P_input_total =
+P_signal_in
++
+P_pump_1
++
+P_pump_2
+
+and:
+
+P_output_total =
+P_phase_conjugate
++
+P_transmitted
++
+P_reflected
++
+P_scattered
++
+P_other
+
+The measured residual is:
+
+P_residual =
+P_input_total - P_output_total
+
+The fractional unexplained loss is:
+
+eta_unaccounted =
+P_residual / P_input_total
+
+All detector calibration uncertainties shall be propagated into the uncertainty of this quantity.
+
+No claim of energy conservation or energy advantage shall be made unless the complete measurement uncertainty is smaller than the claimed effect.
+
+8.18. Total Physical Efficiency
+
+The experimentally relevant optical conversion efficiency shall be reported as:
+
+eta_pc =
+P_phase_conjugate / P_signal_in
+
+This quantity must not be confused with:
+
+logical efficiency
+
+Landauer-limit reduction
+
+wall-plug efficiency
+
+or system-level computational efficiency.
+
+For the complete laboratory apparatus, wall-plug efficiency shall eventually be defined as:
+
+eta_wall =
+P_useful_optical_output / P_electrical_input
+
+where the electrical input includes:
+
+laser driver
+
+temperature controller
+
+SLM electronics
+
+detector electronics
+
+pump source
+
+cooling
+
+and other active equipment used by the experimental system.
+
+The first experiment may report optical efficiency without claiming wall-plug efficiency.
+
+8.19. Information-Reversal Test
+
+After successful phase-conjugation measurement with simple optical distortions, the experiment shall progress to encoded spatial information.
+
+The input sequence shall contain known patterns.
+
+Examples:
+
+binary amplitude patterns
+
+phase gratings
+
+letters
+
+two-dimensional test matrices
+
+and controlled random phase patterns.
+
+The input state shall be recorded.
+
+The phase-conjugated output shall be recorded.
+
+A reconstruction algorithm shall then compare:
+
+original input
+
+phase-conjugated field
+
+reconstructed field
+
+and recovered information.
+
+The experiment shall report reconstruction fidelity rather than merely visual similarity.
+
+
+8.20. Reversible Two-State Demonstration
+
+The first computational demonstration should use two controlled optical modes.
+
+Mode A and Mode B shall be independently generated.
+
+The optical transformation shall map:
+
+A -> B
+
+and subsequently:
+
+B -> A
+
+under a predefined experimental configuration.
+
+The experiment shall measure the recovered state rather than assuming reversibility from the optical geometry.
+
+The final metric shall be:
+
+E_recovery =
+distance between recovered state and original state
+divided by
+norm of original state
+
+The same input states shall be tested repeatedly.
+
+The transformation shall be considered experimentally reversible only if the measured recovery error remains below a predefined threshold established before the data are examined.
+
+8.21. Pre-Registered Failure Criteria
+
+The experiment shall be considered unsuccessful as an RI phase-conjugation demonstration if any of the following conditions persist after alignment and calibration:
+
+No reproducible nonlinear-dependent conjugated output.
+
+Phase-conjugation fidelity indistinguishable from the linear-control baseline.
+
+Output wavefront does not correspond to the conjugated input wavefront.
+
+Conversion efficiency is below the minimum required for the intended experiment.
+
+Thermal drift prevents stable operation.
+
+The observed signal cannot be separated from detector noise or ordinary reflection.
+
+The measured energy balance contains an unexplained residual larger than the experimental uncertainty.
+
+The two-state recovery experiment fails its predefined recovery-error threshold.
+
+These are legitimate negative results.
+
+They shall not trigger arbitrary modification of the acceptance criteria.
+
+
+8.22. Experimental Parameter Record
+
+Every experimental run shall record:
+
+Date and time
+
+Laser wavelength
+
+Laser operating mode
+
+Laser output power
+
+Laser power stability
+
+Crystal identification
+
+Crystal dimensions
+
+Crystal orientation
+
+Crystal temperature
+
+Beam diameter
+
+Beam angle
+
+Polarization state
+
+Pump power
+
+Signal power
+
+Detector model
+
+Detector calibration date
+
+Wavefront sensor model
+
+SLM model, if used
+
+SLM pattern
+
+Input wavefront
+
+Output wavefront
+
+Phase-conjugation fidelity
+
+Conversion efficiency
+
+Total measured optical power
+
+Unaccounted optical loss
+
+Thermal drift
+
+and experimental uncertainty.
+
+No numerical result shall enter the RI White Book without its corresponding experimental configuration.
+
+8.23. Minimum Hardware Bill of Materials
+
+The minimum practical laboratory system consists of:
+
+1. Stable 632.8 nm CW laser.
+2. Optical table with vibration isolation.
+3. Kinematic mirrors and mounts.
+4. 400 to 700 nm 50:50 beamsplitter.
+5. Linear polarizers.
+6. Half-wave plates.
+7. Quarter-wave plates where required.
+8. Beam-expanding and focusing optics.
+9. Precision irises.
+10. BaTiO3 photorefractive crystal.
+11. Crystal rotation stage.
+12. Optical power meter and calibrated silicon sensor.
+13. Silicon photodetector for temporal monitoring.
+14. Shack-Hartmann wavefront sensor.
+15. Visible spectrometer.
+16. Beam dumps.
+17. Neutral-density filters.
+18. Camera for beam-profile monitoring.
+19. Optional 632.8 nm-compatible phase-only SLM.
+20. Laser safety enclosure and appropriate wavelength-rated protective equipment.
+
+Commercial examples exist for the principal diagnostic and modulation components: Thorlabs provides visible beamsplitters, silicon power sensors and photodetectors, while Hamamatsu provides LCOS phase modulators characterized at 633 nm.
+
+8.24. Experimental Decision Gate
+
+The laboratory program shall terminate at the first decisive result rather than automatically generating another test.
+
+PASS CONDITION
+
+A reproducible nonlinear optical output is obtained whose measured complex wavefront demonstrates phase-conjugate correspondence with the independently measured input wavefront, with quantified fidelity, conversion efficiency, and energy balance.
+
+FAIL CONDITION
+
+No reproducible phase-conjugated wavefront can be obtained under the documented experimental conditions, or the observed output cannot be distinguished from the linear control within measurement uncertainty.
+
+INCONCLUSIVE CONDITION
+
+The experiment produces a candidate phase-conjugated signal, but measurement uncertainty, calibration limitations, or uncontrolled experimental parameters prevent discrimination between the RI hypothesis and competing explanations.
+
+An inconclusive result is not evidence for RI.
+
+It is evidence that the current experiment did not resolve the hypothesis.
+
+8.25. Experimental Status of Section 8
+
+This section defines a physical test protocol.
+
+It does not claim that the RI architecture has been experimentally demonstrated.
+
+It does not assume that phase conjugation will produce a computational advantage.
+
+It does not assume that optical reversibility eliminates total physical energy consumption.
+
+It does not assume that a visible-wavelength demonstration establishes operation at 100 THz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
