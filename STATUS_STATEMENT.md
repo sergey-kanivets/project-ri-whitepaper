@@ -1,13 +1,15 @@
-STATUS STATEMENT
+# STATUS STATEMENT
 
-Scientific Status and Methodological Transparency of the Realistic Intelligence (RI) Architecture
+## Scientific Status and Methodological Transparency of the Realistic Intelligence (RI) Architecture
 
 **Project:** Realistic Intelligence (RI)  
 **Document:** Scientific Status and Methodological Transparency Statement  
 **Status:** Public methodological disclosure  
 **Scope:** Scientific evidence classification, assumptions, limitations, reproducibility, simulation/experiment boundaries, negative results, and falsifiability criteria
 
-1. EVIDENCE CLASSIFICATION
+---
+
+## 1. EVIDENCE CLASSIFICATION
 
 The Realistic Intelligence (RI) project distinguishes explicitly between established physical knowledge, mathematical derivation, computational modeling, required experimental validation, and project-specific hypotheses.
 
@@ -15,7 +17,7 @@ No mathematical derivation or numerical simulation is treated as equivalent to e
 
 Each substantive technical statement within the RI documentation shall, where applicable, be assigned to one of the following evidence classes.
 
-1.1 ESTABLISHED PHYSICS
+### 1.1 ESTABLISHED PHYSICS
 
 **Definition:** A statement supported by established physical theory and/or experimentally established physical laws, models, or material behavior independent of the RI project.
 
@@ -35,7 +37,9 @@ Examples relevant to the RI framework include:
 
 An ESTABLISHED PHYSICS designation does not imply that the corresponding phenomenon has been demonstrated in the specific RI architecture.
 
-1.2 DERIVED MATHEMATICALLY
+---
+
+### 1.2 DERIVED MATHEMATICALLY
 
 **Definition:** A result obtained by mathematical derivation from explicitly stated definitions, assumptions, and established equations.
 
@@ -54,7 +58,9 @@ Examples include:
 
 A DERIVED MATHEMATICALLY result establishes mathematical consistency under the stated assumptions. It does not establish that a physical device can realize the corresponding transformation with the required fidelity, stability, bandwidth, efficiency, or scalability.
 
-1.3 MODEL RESULT
+---
+
+### 1.3 MODEL RESULT
 
 **Definition:** A result obtained from numerical simulation, computational modeling, analytical approximation, or parameterized calculation.
 
@@ -76,7 +82,9 @@ MODEL RESULT shall not be described as "experimentally demonstrated," "experimen
 
 A simulation may establish that a proposed mechanism is mathematically or numerically plausible under defined conditions. It does not establish that the corresponding physical device exists or performs equivalently.
 
-1.4 EXPERIMENTAL REQUIREMENT
+---
+
+### 1.4 EXPERIMENTAL REQUIREMENT
 
 **Definition:** A physical quantity, relationship, or behavior that must be measured experimentally before a corresponding RI claim can be considered physically validated.
 
@@ -97,7 +105,9 @@ Examples include:
 
 An EXPERIMENTAL REQUIREMENT remains unresolved until an appropriately controlled measurement has been performed.
 
-1.5 RI HYPOTHESIS
+---
+
+### 1.5 RI HYPOTHESIS
 
 **Definition:** A project-specific proposition concerning the possible engineering significance, architecture, scalability, or computational utility of the RI framework that is not established independently by existing physics or by completed RI experiments.
 
@@ -111,7 +121,9 @@ Examples include:
 
 An RI HYPOTHESIS is not a statement of established fact.
 
-2. ASSUMPTIONS AND LIMITATIONS REGISTER
+---
+
+## 2. ASSUMPTIONS AND LIMITATIONS REGISTER
 
 The following register identifies major idealizations and their physical dependencies. Each assumption is explicitly treated as conditional rather than as an established property of an RI implementation.
 
@@ -134,11 +146,13 @@ These assumptions are not hidden premises. They are part of the declared model b
 
 Any claim depending materially upon one of these assumptions must identify that dependency.
 
-3. WHAT RI DOES NOT CLAIM
+---
+
+## 3. WHAT RI DOES NOT CLAIM
 
 The following statements constitute an explicit limitation register for the RI project.
 
-3.1 RI does not claim zero-energy computation
+### 3.1 RI does not claim zero-energy computation
 
 Reversible or approximately reversible information transformation does not imply zero physical energy consumption.
 
@@ -169,8 +183,9 @@ does not imply:
 
 P_total -> 0.
 
+---
 
-3.2 RI does not claim that phase conjugation is identical to complete physical time reversal
+### 3.2 RI does not claim that phase conjugation is identical to complete physical time reversal
 
 Complex field conjugation is a mathematically defined transformation.
 
@@ -182,7 +197,9 @@ does not, by itself, establish reversal of the complete physical state of the un
 
 The RI documentation therefore treats phase conjugation as a physically realizable optical transformation to be experimentally evaluated, not as proof of complete physical time reversal.
 
-3.3 RI does not claim that 100 THz is a fundamental operating optimum
+---
+
+### 3.3 RI does not claim that 100 THz is a fundamental operating optimum
 
 The frequency of 100 THz was used in earlier RI simulations as a nominal reference frequency.
 
@@ -190,7 +207,9 @@ Subsequent independent-geometry analysis demonstrated that the spectral response
 
 Therefore 100 THz is not treated as an experimentally established optimum, universal RI frequency, or fundamental physical constant of the architecture.
 
-3.4 RI does not claim that mathematical unitarity proves physical reversibility
+---
+
+### 3.4 RI does not claim that mathematical unitarity proves physical reversibility
 
 A matrix satisfying:
 
@@ -202,7 +221,9 @@ This does not demonstrate that a physical device implements U without loss, nois
 
 Mathematical reversibility and experimentally demonstrated physical reversibility are therefore separate evidence categories.
 
-3.5 RI does not claim automatic superiority over electronic computing
+---
+
+### 3.5 RI does not claim automatic superiority over electronic computing
 
 The use of optical fields, photonic structures, phase conjugation, or reversible transformations does not establish superior:
 
@@ -218,8 +239,9 @@ The use of optical fields, photonic structures, phase conjugation, or reversible
 
 Any comparative claim requires an explicitly defined baseline and equivalent measurement boundary.
 
+---
 
-3.6 RI does not claim that VEK -> ROK has already been experimentally observed
+### 3.6 RI does not claim that VEK -> ROK has already been experimentally observed
 
 VEK and ROK are project-defined regions of a constraint framework.
 
@@ -231,13 +253,17 @@ is a model definition.
 
 It is not evidence that a specific physical RI device has experimentally exhibited the corresponding transition.
 
-3.7 RI does not claim that simulation constitutes experimental evidence
+---
+
+### 3.7 RI does not claim that simulation constitutes experimental evidence
 
 Numerical agreement with a theoretical model is not experimental validation.
 
 A simulation may establish numerical behavior under specified assumptions. Physical validation requires measurement of the corresponding physical system.
 
-3.8 RI does not claim that visible-wavelength phase-conjugation experiments establish operation at 100 THz
+---
+
+### 3.8 RI does not claim that visible-wavelength phase-conjugation experiments establish operation at 100 THz
 
 A successful phase-conjugation experiment at one wavelength establishes only the behavior of the tested physical system under its measured conditions.
 
@@ -250,7 +276,9 @@ It does not automatically establish:
 - equivalent fidelity;
 - or scalability to a three-dimensional computational architecture.
 
-3.9 RI does not claim that optical reversibility eliminates all thermodynamic constraints
+---
+
+### 3.9 RI does not claim that optical reversibility eliminates all thermodynamic constraints
 
 Optical reversibility of a field transformation does not remove the thermodynamic requirements of the complete computational system.
 
@@ -267,20 +295,23 @@ Sources of entropy production may remain in:
 - thermal management;
 - and auxiliary electronics.
 
-3.10 RI does not claim experimental validation where none has been performed
+---
+
+### 3.10 RI does not claim experimental validation where none has been performed
 
 Any statement concerning experimental performance must be supported by a documented physical measurement.
 
 Where such a measurement does not exist, the corresponding statement remains a hypothesis, model result, or experimental requirement.
 
+---
 
-4. REPRODUCIBILITY PROTOCOL
+## 4. REPRODUCIBILITY PROTOCOL
 
 All computational results intended for scientific use within the RI project shall be associated with a reproducibility record containing sufficient information for an independent investigator to reconstruct the calculation.
 
 The minimum record shall contain the following elements.
 
-4.1 Software Identification
+### 4.1 Software Identification
 
 The record shall specify:
 
@@ -295,7 +326,9 @@ The record shall specify:
 
 Unversioned software descriptions are insufficient for a reproducibility-critical result.
 
-4.2 Governing Equations
+---
+
+### 4.2 Governing Equations
 
 The complete set of equations used to obtain the result shall be identified.
 
@@ -320,7 +353,9 @@ For thermal simulations, this may include:
 
 For computational transformations, the transformation operator and state representation shall be explicitly defined.
 
-4.3 Geometry Definition
+---
+
+### 4.3 Geometry Definition
 
 The complete geometry shall be recorded, including:
 
@@ -338,7 +373,9 @@ The complete geometry shall be recorded, including:
 
 Geometry parameters shall be recorded numerically rather than described only qualitatively.
 
-4.4 Material Parameters
+---
+
+### 4.4 Material Parameters
 
 All material parameters used in a simulation shall be identified by:
 
@@ -354,7 +391,9 @@ For complex refractive indices, both real and imaginary components shall be docu
 
 A literature material parameter shall not automatically be treated as the parameter of a fabricated experimental device.
 
-4.5 Boundary Conditions
+---
+
+### 4.5 Boundary Conditions
 
 The record shall specify all boundary conditions, including where applicable:
 
@@ -370,7 +409,9 @@ The record shall specify all boundary conditions, including where applicable:
 
 Unspecified boundary conditions constitute a reproducibility defect.
 
-4.6 Source Definition
+---
+
+### 4.6 Source Definition
 
 The source shall be documented by:
 
@@ -385,7 +426,9 @@ The source shall be documented by:
 - source position;
 - coherence assumptions.
 
-4.7 Numerical Mesh and Discretization
+---
+
+### 4.7 Numerical Mesh and Discretization
 
 The numerical discretization shall be recorded, including:
 
@@ -399,7 +442,9 @@ The numerical discretization shall be recorded, including:
 
 The numerical resolution must be sufficient to resolve the relevant physical scales.
 
-4.8 Convergence Criterion
+---
+
+### 4.8 Convergence Criterion
 
 A numerical result shall not be regarded as converged solely because the solver terminated successfully.
 
@@ -416,7 +461,9 @@ The convergence protocol shall define an explicit criterion, such as:
 
 The tolerance must be defined before final interpretation of the result whenever practical.
 
-4.9 Parameter Sweep Protocol
+---
+
+### 4.9 Parameter Sweep Protocol
 
 For parameter sweeps, the record shall identify:
 
@@ -429,7 +476,9 @@ For parameter sweeps, the record shall identify:
 
 A parameter must not be retrospectively optimized solely to produce a desired conclusion without explicitly declaring the optimization procedure.
 
-4.10 Output Metrics
+---
+
+### 4.10 Output Metrics
 
 Every reported numerical result shall specify the exact metric being evaluated.
 
@@ -449,7 +498,9 @@ Examples include:
 
 The measurement definition must be unambiguous.
 
-4.11 Data Preservation
+---
+
+### 4.11 Data Preservation
 
 Where practical, the following shall be retained:
 
@@ -464,6 +515,8 @@ Where practical, the following shall be retained:
 - software version information.
 
 The final plotted result shall be traceable to the underlying numerical dataset.
+
+---
 
 ## 5. SIMULATION VS. EXPERIMENT BOUNDARIES
 
@@ -521,6 +574,258 @@ Appropriate terminology includes:
 ---
 
 ### 5.3 The 100 THz Simulation History
+
+Early RI simulations used 100 THz as a nominal design frequency and employed geometries selected to produce a desired spectral response near that frequency.
+
+Such simulations demonstrated the behavior of the selected model but could not independently establish 100 THz as a physically preferred operating frequency.
+
+A subsequent independent-geometry sweep was therefore performed using a geometry not selected specifically to optimize the 100 THz response.
+
+That analysis produced a different spectral optimum, near approximately 128.69 THz for the particular modeled structure.
+
+This result establishes an important methodological distinction:
+
+The earlier 100 THz response was geometry-dependent.
+
+It was not evidence of a universal 100 THz optimum.
+
+The later result is itself a MODEL RESULT and does not constitute experimental confirmation of a preferred operating frequency.
+
+---
+
+### 5.4 Interpretation Rule
+
+A simulation result shall remain a simulation result unless and until an experimentally corresponding observation is obtained.
+
+Conversely, an experiment shall not be interpreted as validating a broader theoretical claim than the measured configuration actually tests.
+
+The scope of a conclusion shall not exceed the scope of the evidence.
+
+---
+
+## 6. NEGATIVE RESULTS REGISTER
+
+Negative and non-confirmatory results are retained as part of the scientific record.
+
+The purpose of this register is to document cases in which a predefined or independently selected test did not produce the expected or previously assumed result.
+
+Such results are not removed merely because they do not support the preferred interpretation of the RI architecture.
+
+---
+
+### NR-01 — Independent Geometry Does Not Select 100 THz as the Spectral Optimum
+
+**Test classification:** Numerical electromagnetic simulation
+
+**Purpose:**
+
+To determine whether a periodic optical structure selected independently of the 100 THz reference frequency would naturally exhibit its optimum response at or near 100 THz.
+
+**Method:**
+
+A periodic dielectric structure was specified using geometry parameters not selected by fitting the structure to a 100 THz target.
+
+The resulting structure was evaluated over a frequency interval spanning approximately 70 THz to 130 THz.
+
+**Result:**
+
+The calculated maximum transmission occurred near approximately 128.69 THz rather than at 100 THz.
+
+The response near 100 THz was not the maximum of the independently selected structure.
+
+**Interpretation:**
+
+The result rejects the interpretation that 100 THz is an intrinsic optimum of the modeled RI mechanism.
+
+It demonstrates that the spectral response is dependent on the selected geometry and material configuration.
+
+The result therefore constrains, rather than strengthens, the claim that 100 THz has special significance.
+
+**Evidence classification:**
+
+MODEL RESULT
+
+**Scientific significance:**
+
+NR-01 is retained because it provides a negative control against confirmation-biased interpretation of earlier 100 THz simulations.
+
+It demonstrates that the RI methodology is capable of recording results that contradict an earlier design expectation.
+
+NR-01 does not prove the correctness of the RI architecture. It establishes only that the specific tested structure did not reproduce the previously assumed 100 THz optimum.
+
+---
+
+## 7. RI KILL CRITERIA
+
+The RI validation program is intended to be falsifiable.
+
+A scientific or engineering hypothesis is useful only if conditions exist under which the hypothesis can fail.
+
+The following criteria define classes of results that would materially weaken or invalidate specific RI claims.
+
+### 7.1 Physical Phase-Conjugation Failure
+
+The proposed physical phase-conjugation mechanism shall be considered unsupported for the tested configuration if repeated controlled experiments fail to produce a statistically distinguishable conjugated wavefront under conditions where the proposed mechanism is expected to operate.
+
+---
+
+### 7.2 Insufficient Fidelity
+
+If experimentally measured phase-conjugation fidelity remains below a predefined acceptance threshold under the specified operating conditions, the corresponding implementation shall not be considered a validated realization of the proposed RI transformation.
+
+The threshold must be defined before interpreting the final experimental outcome.
+
+---
+
+### 7.3 Uncontrolled Loss
+
+If measured optical loss, conversion loss, thermal loading, or control overhead prevents the proposed transformation from satisfying the defined operational constraints, the corresponding implementation shall be classified as physically constrained or infeasible under those conditions.
+
+---
+
+### 7.4 Non-Recoverable Transformation
+
+If repeated forward/inverse transformations demonstrate systematic state degradation beyond the predefined error tolerance, the corresponding implementation shall not be classified as experimentally reversible at that operating point.
+
+---
+
+### 7.5 Failure of Scaling
+
+If increasing system size, mode count, transformation depth, or operational complexity causes fidelity, loss, latency, thermal load, or energy requirements to violate predefined limits, the corresponding scalability claim shall be considered unsupported.
+
+---
+
+### 7.6 No System-Level Energy Advantage
+
+If a complete and equivalent energy accounting demonstrates that an RI implementation does not provide the claimed energy-performance benefit relative to the defined baseline under identical computational requirements and accuracy constraints, no system-level energy advantage shall be claimed.
+
+The architecture may still possess other experimentally relevant properties, but an unconfirmed energy advantage shall not be inferred from low logical irreversibility alone.
+
+---
+
+### 7.7 Failure of VEK/ROK Predictive Utility
+
+If the VEK/ROK constraint framework fails to predict experimentally observable operational boundaries within the declared model assumptions and measurement uncertainty, the framework shall be treated as an inadequate model for that physical system.
+
+---
+
+### 7.8 No Retroactive Rescue by Parameter Selection
+
+Failure of a predefined test shall not be automatically remedied by:
+
+- changing the target frequency;
+- changing the geometry;
+- changing the material;
+- changing the acceptance criterion;
+- redefining the computational operation;
+- changing the baseline;
+- or introducing a new simulation specifically selected to reproduce the desired result.
+
+A new parameter set may be investigated only when it is justified by an independently stated physical or engineering reason.
+
+---
+
+## 8. CONTROL OF THE VALIDATION PROGRAM
+
+The RI validation program shall be governed by predefined criteria rather than by progressive adjustment of the methodology in response to unfavorable results.
+
+The following principles apply.
+
+### 8.1 Predefined Test Definition
+
+Where practical, the following shall be defined before execution:
+
+- objective;
+- input conditions;
+- geometry;
+- material parameters;
+- frequency range;
+- measurement boundary;
+- primary metric;
+- acceptance criterion;
+- uncertainty requirement;
+- failure criterion.
+
+---
+
+### 8.2 No Result-Driven Redesign
+
+A failed result shall not automatically trigger a new model designed to recover the expected behavior.
+
+Additional simulations or experiments require an independently stated justification, such as:
+
+- correction of an identified modeling error;
+- introduction of a previously omitted physical mechanism;
+- experimentally observed behavior requiring explanation;
+- increased numerical resolution;
+- parameter uncertainty analysis;
+- or a predefined extension of the test matrix.
+
+---
+
+### 8.3 No Selective Reporting
+
+Results that contradict the preferred RI interpretation shall remain part of the documented research record when they are relevant to the tested hypothesis.
+
+Positive and negative results shall be interpreted using the same methodological standards.
+
+---
+
+### 8.4 No Terminological Inflation
+
+The following distinctions shall be preserved:
+
+"mathematically possible" is not equivalent to "physically realized."
+
+"numerically observed" is not equivalent to "experimentally demonstrated."
+
+"experimentally demonstrated" is not equivalent to "engineeringly scalable."
+
+"low logical dissipation" is not equivalent to "low total system energy."
+
+"phase conjugation" is not equivalent to "complete physical time reversal."
+
+"nominal frequency" is not equivalent to "experimentally established optimum."
+
+---
+
+## 9. SCIENTIFIC INTEGRITY STATEMENT
+
+The Realistic Intelligence (RI) project is presented as a physically constrained and experimentally testable engineering hypothesis, not as an experimentally established physical law.
+
+The project distinguishes explicitly between:
+
+1. established physical principles;
+2. mathematical derivations;
+3. computational model results;
+4. experimental requirements;
+5. RI-specific hypotheses.
+
+The RI documentation does not treat numerical simulation as experimental proof.
+
+It does not treat mathematical reversibility as proof of physical reversibility.
+
+It does not treat complex field conjugation as proof of complete physical time reversal.
+
+It does not treat the nominal 100 THz frequency as an experimentally established optimum.
+
+It does not infer zero total energy consumption from the theoretical suppression of logical irreversibility.
+
+It does not infer computational superiority from the use of photonic or reversible transformations alone.
+
+The VEK and ROK domains are treated as elements of a defined constraint model. Their physical predictive value remains subject to experimental validation.
+
+The validation program is intentionally falsifiable. Predefined failure criteria are retained, and negative results are considered scientifically relevant rather than being excluded from the project record.
+
+New simulations or experiments shall not be introduced solely to rescue a previously unsupported conclusion. Any extension of the validation program must have an independently defensible physical, mathematical, numerical, or experimental justification.
+
+Accordingly, the present scientific status of RI shall be stated conservatively:
+
+> **RI is a physically constrained, quantitatively formulated, and experimentally testable engineering hypothesis. Its proposed computational advantages, scalability, and system-level performance remain subject to experimental validation.**
+
+This statement defines the evidentiary boundary of the RI project and shall govern the interpretation of all subsequent technical publications, simulations, experimental reports, and revisions of the RI White Book.
+
+
 
 
 
