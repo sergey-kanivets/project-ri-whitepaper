@@ -190,6 +190,343 @@ Subsequent independent-geometry analysis demonstrated that the spectral response
 
 Therefore 100 THz is not treated as an experimentally established optimum, universal RI frequency, or fundamental physical constant of the architecture.
 
+3.4 RI does not claim that mathematical unitarity proves physical reversibility
+
+A matrix satisfying:
+
+U†U = I
+
+is mathematically unitary.
+
+This does not demonstrate that a physical device implements U without loss, noise, coupling errors, uncontrolled modes, thermal effects, or measurement limitations.
+
+Mathematical reversibility and experimentally demonstrated physical reversibility are therefore separate evidence categories.
+
+3.5 RI does not claim automatic superiority over electronic computing
+
+The use of optical fields, photonic structures, phase conjugation, or reversible transformations does not establish superior:
+
+- energy efficiency;
+- computational throughput;
+- latency;
+- density;
+- reliability;
+- manufacturability;
+- cost;
+- scalability;
+- or total system performance.
+
+Any comparative claim requires an explicitly defined baseline and equivalent measurement boundary.
+
+
+3.6 RI does not claim that VEK -> ROK has already been experimentally observed
+
+VEK and ROK are project-defined regions of a constraint framework.
+
+The mathematical transition:
+
+F(p) <= 1 -> F(p) > 1
+
+is a model definition.
+
+It is not evidence that a specific physical RI device has experimentally exhibited the corresponding transition.
+
+3.7 RI does not claim that simulation constitutes experimental evidence
+
+Numerical agreement with a theoretical model is not experimental validation.
+
+A simulation may establish numerical behavior under specified assumptions. Physical validation requires measurement of the corresponding physical system.
+
+3.8 RI does not claim that visible-wavelength phase-conjugation experiments establish operation at 100 THz
+
+A successful phase-conjugation experiment at one wavelength establishes only the behavior of the tested physical system under its measured conditions.
+
+It does not automatically establish:
+
+- equivalent performance at 100 THz;
+- equivalent performance in a different material;
+- equivalent performance in a different geometry;
+- equivalent conversion efficiency;
+- equivalent fidelity;
+- or scalability to a three-dimensional computational architecture.
+
+3.9 RI does not claim that optical reversibility eliminates all thermodynamic constraints
+
+Optical reversibility of a field transformation does not remove the thermodynamic requirements of the complete computational system.
+
+Sources of entropy production may remain in:
+
+- measurement;
+- control;
+- amplification;
+- detection;
+- memory;
+- resetting;
+- error correction;
+- conversion between physical domains;
+- thermal management;
+- and auxiliary electronics.
+
+3.10 RI does not claim experimental validation where none has been performed
+
+Any statement concerning experimental performance must be supported by a documented physical measurement.
+
+Where such a measurement does not exist, the corresponding statement remains a hypothesis, model result, or experimental requirement.
+
+
+4. REPRODUCIBILITY PROTOCOL
+
+All computational results intended for scientific use within the RI project shall be associated with a reproducibility record containing sufficient information for an independent investigator to reconstruct the calculation.
+
+The minimum record shall contain the following elements.
+
+4.1 Software Identification
+
+The record shall specify:
+
+- software package;
+- software version;
+- solver type;
+- operating environment where relevant;
+- numerical libraries where relevant;
+- custom source-code version or commit identifier;
+- simulation script identifier;
+- random seed where stochastic procedures are used.
+
+Unversioned software descriptions are insufficient for a reproducibility-critical result.
+
+4.2 Governing Equations
+
+The complete set of equations used to obtain the result shall be identified.
+
+For electromagnetic simulations, this may include:
+
+- Maxwell equations;
+- constitutive relations;
+- material dispersion models;
+- conductivity or absorption terms;
+- nonlinear constitutive relations where applicable;
+- eigenvalue equations;
+- scattering or transfer-matrix formulations;
+- Bloch/Floquet conditions.
+
+For thermal simulations, this may include:
+
+- heat conduction equations;
+- volumetric heat-source terms;
+- temperature-dependent material properties;
+- convection boundary conditions;
+- radiation terms where applicable.
+
+For computational transformations, the transformation operator and state representation shall be explicitly defined.
+
+4.3 Geometry Definition
+
+The complete geometry shall be recorded, including:
+
+- dimensions;
+- layer thicknesses;
+- lattice constants;
+- defect dimensions;
+- material assignment;
+- periodicity;
+- coordinate system;
+- source and detector positions;
+- optical path lengths;
+- boundary locations;
+- symmetry assumptions.
+
+Geometry parameters shall be recorded numerically rather than described only qualitatively.
+
+4.4 Material Parameters
+
+All material parameters used in a simulation shall be identified by:
+
+- numerical value;
+- units;
+- wavelength or frequency dependence;
+- temperature dependence where relevant;
+- source or reference;
+- interpolation method;
+- uncertainty where available.
+
+For complex refractive indices, both real and imaginary components shall be documented where applicable.
+
+A literature material parameter shall not automatically be treated as the parameter of a fabricated experimental device.
+
+4.5 Boundary Conditions
+
+The record shall specify all boundary conditions, including where applicable:
+
+- periodic boundaries;
+- Bloch/Floquet boundaries;
+- perfectly matched layers;
+- reflective boundaries;
+- symmetry boundaries;
+- absorbing boundaries;
+- thermal convection boundaries;
+- fixed-temperature boundaries;
+- electrical boundary conditions.
+
+Unspecified boundary conditions constitute a reproducibility defect.
+
+4.6 Source Definition
+
+The source shall be documented by:
+
+- frequency or wavelength;
+- bandwidth;
+- amplitude or power;
+- polarization;
+- phase;
+- spatial mode;
+- temporal profile;
+- incidence angle;
+- source position;
+- coherence assumptions.
+
+4.7 Numerical Mesh and Discretization
+
+The numerical discretization shall be recorded, including:
+
+- mesh type;
+- mesh dimensions;
+- minimum and maximum element size;
+- resolution relative to wavelength;
+- refinement regions;
+- temporal step size where applicable;
+- solver tolerances.
+
+The numerical resolution must be sufficient to resolve the relevant physical scales.
+
+4.8 Convergence Criterion
+
+A numerical result shall not be regarded as converged solely because the solver terminated successfully.
+
+The convergence protocol shall define an explicit criterion, such as:
+
+| Result Class | Minimum Required Convergence Test |
+|---|---|
+| Eigenfrequency | Relative frequency change below predefined tolerance |
+| Transmission/reflection | Relative change below predefined tolerance |
+| Field distribution | Norm-based field difference below predefined tolerance |
+| Operator metric | Relative change below predefined tolerance |
+| Thermal result | Maximum temperature or integrated heat-flow change below predefined tolerance |
+| Phase-conjugation fidelity | Stability of fidelity under mesh refinement and numerical tolerance variation |
+
+The tolerance must be defined before final interpretation of the result whenever practical.
+
+4.9 Parameter Sweep Protocol
+
+For parameter sweeps, the record shall identify:
+
+- parameter range;
+- step size;
+- number of sampled points;
+- interpolation method;
+- optimization method if used;
+- whether the geometry was fixed or redesigned during the sweep.
+
+A parameter must not be retrospectively optimized solely to produce a desired conclusion without explicitly declaring the optimization procedure.
+
+4.10 Output Metrics
+
+Every reported numerical result shall specify the exact metric being evaluated.
+
+Examples include:
+
+- transmission T;
+- reflection R;
+- absorption A;
+- scattering-matrix unitarity error;
+- recovery error;
+- phase-conjugation fidelity;
+- conversion efficiency;
+- thermal resistance;
+- maximum temperature;
+- propagation time;
+- energy per operation.
+
+The measurement definition must be unambiguous.
+
+4.11 Data Preservation
+
+Where practical, the following shall be retained:
+
+- input parameter files;
+- geometry files;
+- material data;
+- simulation scripts;
+- raw numerical outputs;
+- processed data;
+- plots generated from raw data;
+- convergence records;
+- software version information.
+
+The final plotted result shall be traceable to the underlying numerical dataset.
+
+## 5. SIMULATION VS. EXPERIMENT BOUNDARIES
+
+The RI project maintains a strict semantic distinction between computational evidence and physical evidence.
+
+### 5.1 SIMULATION RESULT
+
+A SIMULATION RESULT is a result obtained from:
+
+- numerical electromagnetic modeling;
+- analytical computation;
+- numerical optimization;
+- thermal simulation;
+- matrix or operator analysis;
+- computational parameter sweeps;
+- or related mathematical/computational procedures.
+
+Appropriate terminology includes:
+
+- "the simulation predicts";
+- "the model produces";
+- "the numerical calculation gives";
+- "the computed result indicates under the stated assumptions."
+
+Inappropriate terminology includes:
+
+- "experimentally demonstrated";
+- "physically verified";
+- "experimentally proven."
+
+unless independent physical measurements support the statement.
+
+---
+
+### 5.2 EXPERIMENTAL RESULT
+
+An EXPERIMENTAL RESULT requires:
+
+1. a physical apparatus;
+2. a defined experimental procedure;
+3. calibrated or characterized measurement equipment;
+4. recorded measurements;
+5. documented experimental conditions;
+6. appropriate controls;
+7. uncertainty estimation where applicable;
+8. sufficient repeatability to support the stated conclusion.
+
+Appropriate terminology includes:
+
+- "experimentally measured";
+- "experimentally observed";
+- "measured under the stated conditions";
+- "reproduced across independent trials."
+
+---
+
+### 5.3 The 100 THz Simulation History
+
+
+
+
+
+
 
 
 
