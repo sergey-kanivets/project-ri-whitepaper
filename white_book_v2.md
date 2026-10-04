@@ -4059,6 +4059,719 @@ It does not assume that optical reversibility eliminates total physical energy c
 It does not assume that a visible-wavelength demonstration establishes operation at 100 THz.
 
 
+9. FORMAL INFORMATION TRANSFORMATIONS, LANGUAGE, REVERSIBILITY, AND VALIDATION BOUNDARIES
+
+9.0. PURPOSE AND EPISTEMIC STATUS
+
+This section defines a formal framework for representing linguistic inputs, informational states, transformations, interpretation criteria, and recoverability.
+
+The purpose of this section is methodological and formal. It does not establish a new theory of natural language, quantum language, photonic language, or semantic computation.
+
+In particular:
+
+- mathematical representation is not physical realization;
+- mathematical reversibility is not physical reversibility;
+- formal interpretation preservation is not proof of human semantic equivalence;
+- optical phase conjugation is not automatically a language transformation;
+- simulation is not experimental validation;
+- experimental phase conjugation is not, by itself, evidence of computational advantage.
+
+The formalism below therefore separates three levels:
+
+1. linguistic representation;
+2. informational transformation;
+3. physical implementation.
+
+No conclusion is transferred from one level to another unless an explicit mapping and corresponding validation procedure are provided.
+
+Epistemic status:
+
+DERIVED MATHEMATICALLY WITHIN THE DECLARED FORMAL MODEL:
+results that follow from explicitly stated definitions, assumptions, and mathematical operations.
+
+MODEL RESULT:
+a result obtained from a selected model, parameter set, geometry, boundary condition, or numerical procedure.
+
+EXPERIMENTAL REQUIREMENT:
+a quantity or behavior that cannot be established by the formalism alone and requires physical measurement.
+
+RI HYPOTHESIS:
+a project-specific proposition concerning engineering significance, scalability, computational usefulness, or system-level advantage that is not established solely by the formalism.
+
+9.1. FORMAL REPRESENTATION OF LINGUISTIC INPUT
+
+Let X denote the admissible set of linguistic inputs.
+
+A linguistic input is represented as:
+
+x = (x1, x2, ..., xn)
+
+with:
+
+X subseteq V*
+
+where V is the relevant vocabulary or symbol set and V* is the set of finite symbol sequences.
+
+An encoding function is defined as:
+
+E : X -> R
+
+where R is an abstract representation space.
+
+The representation of x is:
+
+r = E(x)
+
+If E is injective, then:
+
+E(x1) = E(x2) implies x1 = x2
+
+for all x1, x2 in X.
+
+Under injectivity, the inverse mapping
+
+E^(-1) : E(X) -> X
+
+exists on the image E(X).
+
+This establishes recoverability of the original input within the declared mathematical domain.
+
+It does not establish that E is physically implementable, computationally efficient, linguistically complete, or semantically adequate.
+
+Representation is therefore not identified with interpretation.
+
+9.2. INFORMATIONAL STATE
+
+Let S denote an informational state space.
+
+A mapping from linguistic input to informational state is defined as:
+
+J : X -> S
+
+with:
+
+s = J(x)
+
+A computational or informational transformation is represented by:
+
+T : D -> S
+
+where D is the declared domain of T and D is a subset of S.
+
+For sequential transformations:
+
+T2 o T1
+
+denotes application of T1 followed by T2, provided that the codomain of T1 is contained in the domain of T2.
+
+The state representation is considered sufficient only relative to the task being evaluated.
+
+A state representation that is sufficient for one operation may be insufficient for another.
+
+Therefore, state sufficiency is not treated as a universal property.
+
+9.3. FORMAL INTERPRETATION
+
+Let M denote a formally defined interpretation space.
+
+An interpretation mapping is:
+
+I_int : X x C -> M
+
+where C denotes the declared contextual information.
+
+For a given x and context c:
+
+m = I_int(x,c)
+
+A formal interpretation-preservation condition may be written as:
+
+I_int(T_X(x),c) = I_int(x,c)
+
+where T_X -> X is a declared linguistic transformation with D_X subseteq X.
+
+For approximate preservation:
+
+d_M(I_int(T_X(x),c), I_int(x,c)) <= epsilon_M
+
+where d_M is a declared distance or discrepancy measure on M.
+
+This condition is meaningful only relative to the chosen interpretation model, context model, and metric.
+
+It does not constitute a universal mathematical definition of natural-language meaning.
+
+Human semantic equivalence requires an operational definition and, where claimed, empirical evidence.
+
+9.4. INFORMATION PRESERVATION AND REVERSIBILITY
+
+A transformation T is exactly reversible on domain D if there exists T^(-1) such that:
+
+T^(-1)(T(s)) = s
+
+for every s in D.
+
+If T is non-injective, distinct states may satisfy:
+
+s1 != s2
+
+but:
+
+T(s1) = T(s2)
+
+In that case, exact recovery of the original state is impossible from the transformed state alone unless additional information is available.
+
+For deterministic Y = T(X), injectivity preserves distinguishability of the input states within the declared domain.
+
+Mutual information is denoted separately as:
+
+I_mut(X;Y) = H(X) - H(X|Y)
+
+to avoid confusion with the interpretation mapping I_int.
+
+Logical reversibility, information recoverability, and physical reversibility are distinct concepts.
+
+In particular:
+
+logical reversibility != physical reversibility
+
+and:
+
+logical reversibility != zero energy consumption.
+
+Landauer-type thermodynamic limits concern logically irreversible operations such as information erasure under their applicable physical assumptions. They do not imply that every reversible operation requires zero total physical power.
+
+An ideal reversible information transformation may have zero logical-irreversibility contribution while the physical implementation still consumes power for propagation, control, pumping, coupling, detection, stabilization, and other non-ideal processes.
+
+9.5. ADMISSIBLE INFORMATION TRANSFORMATIONS
+
+Let A denote the set of transformations considered admissible for a declared task.
+
+Admissibility may include:
+
+- domain and codomain validity;
+- preservation of required distinctions;
+- output validity;
+- formal interpretation requirements;
+- recoverability requirements;
+- latency constraints;
+- representation error;
+- decoding error;
+- memory requirements;
+- physical resource constraints;
+- declared tolerance limits.
+
+No transformation is considered universally admissible without specifying the task and constraints.
+
+For physical or system-level constraints, define:
+
+F_phys(p) = max_i [C_i(p) / C_i,max]
+
+where p is the declared system parameter vector and C_i(p) are measurable or modelled constraint quantities.
+
+The admissible region is:
+
+VEK = { p : F_phys(p) <= 1 }
+
+The boundary is:
+
+B = { p : F_phys(p) = 1 }
+
+The exceeding region is:
+
+ROK = { p : F_phys(p) > 1 }
+
+VEK and ROK are therefore model-defined regions of parameter space.
+
+The mathematical boundary F_phys = 1 does not, by itself, establish the existence of a physical phase transition or discontinuity.
+
+If a critical scale L_c is defined, it is obtained from the specified constraint equation, for example:
+
+F_phys(L_c, other parameters) = 1
+
+provided such a solution exists and is physically meaningful.
+
+Informational constraints should not be silently mixed with physical constraints.
+
+If an informational constraint function is introduced later, it should be separately designated, for example:
+
+F_info
+
+and its relationship to F_phys must be explicitly defined.
+
+9.6. FORMAL TRANSFORMATIONS AND PHYSICAL OPERATORS
+
+The informational transformation:
+
+T : S -> S
+
+is not automatically identical to a physical optical operator.
+
+Within the physical RI framework, a field transformation may be represented separately.
+
+For a complex field:
+
+Psi = A exp(i phi)
+
+complex conjugation gives:
+
+Psi* = A exp(-i phi)
+
+A formal operator may therefore be defined as:
+
+(-Y) Psi = Psi*
+
+and:
+
+(-Y)^2 Psi = Psi
+
+under the mathematical definition of (-Y) as complex conjugation.
+
+This is a mathematical identity.
+
+It does not, by itself, establish that a physical device performs complete time reversal, information restoration, or computational inversion.
+
+A physical implementation requires an explicit mapping between informational states and physical field states, including encoding, preparation, operation, decoding, measurement, losses, noise, and error criteria.
+
+9.7. PROOF OBLIGATIONS
+
+Any RI claim involving language, information, reversibility, or physical implementation must satisfy the following proof obligations.
+
+1. Definition completeness
+
+All mathematical objects, domains, codomains, parameters, and assumptions must be explicitly defined.
+
+2. Assumption disclosure
+
+Idealizations such as lossless operation, perfect phase conjugation, unitary evolution, negligible logical irreversibility, negligible thermal accumulation, or perfect state recovery must be identified as assumptions rather than experimental facts.
+
+3. Mathematical validity
+
+Each claimed mathematical result must follow from the declared definitions and equations.
+
+4. Novelty assessment
+
+A claim presented as novel must be compared against relevant prior knowledge in areas such as:
+
+- information theory;
+- reversible computation;
+- mathematical linguistics;
+- formal language theory;
+- coding theory;
+- computational theory;
+- nonlinear optics;
+- phase conjugation;
+- photonic computing.
+
+No novelty claim is established by the present formalism alone.
+
+5. Physical correspondence
+
+If a mathematical operation is claimed to have a physical implementation, the physical variables, apparatus, operating conditions, measurement procedure, and error metrics must be specified.
+
+6. Computational significance
+
+A physical implementation must not be described as computationally advantageous without a defined baseline and quantitative comparison.
+
+9.8. EMPIRICAL HYPOTHESES
+
+The following are empirical questions rather than consequences of the formalism:
+
+- whether a proposed representation is adequate for a defined linguistic task;
+- whether a transformation preserves the intended interpretation under an operational definition;
+- whether the transformation is robust to noise and perturbations;
+- whether a physical implementation can reproduce the required transformation;
+- whether the implementation provides measurable computational benefit;
+- whether the RI architecture provides an advantage over an appropriate baseline.
+
+These questions require evidence appropriate to the claim.
+
+A formal derivation cannot substitute for an experiment where the claim concerns physical behavior.
+
+An experiment demonstrating a physical optical effect cannot by itself establish computational superiority.
+
+9.9. LANGUAGE, INFORMATION, AND PHYSICAL INTERFACE
+
+The RI framework distinguishes three levels.
+
+LEVEL 1 — LINGUISTIC
+
+Input language, syntax, grammatical structure, formal interpretation, and declared semantic properties.
+
+LEVEL 2 — INFORMATIONAL
+
+Encoding, state representation, transformation, reversibility, recovery, error, and information preservation.
+
+LEVEL 3 — PHYSICAL
+
+Electromagnetic fields, optical modes, nonlinear interactions, phase conjugation, propagation, losses, thermal effects, control, detection, and hardware constraints.
+
+A physical implementation must specify the complete chain:
+
+linguistic input
+-> encoding
+-> physical state preparation
+-> physical transformation
+-> measurement
+-> decoding
+-> output representation
+-> correctness/recovery evaluation.
+
+The existence of a valid linguistic transformation does not establish that the same transformation is physically implemented by optical phase conjugation.
+
+Conversely, observation of phase conjugation does not establish preservation of human linguistic meaning.
+
+The TIME -> LIGHT -> VEK -> ROK -> new TIME architecture remains a physical/system-level framework.
+
+Section 9 does not redefine TIME, LIGHT, VEK, or ROK as linguistic entities.
+
+9.10. FIRST FORMAL TEST: CONTROLLED ACTIVE-TO-PASSIVE TRANSFORMATION
+
+The first formal language test uses a restricted transformation:
+
+x = "The engineer tested the device."
+
+y = "The device was tested by the engineer."
+
+The test is deliberately narrow.
+
+The declared formal interpretation is:
+
+M = (P, Agent, Patient, Tense, Aspect, Polarity)
+
+For the example:
+
+P = test
+Agent = engineer
+Patient = device
+Tense = past
+Aspect = simple
+Polarity = affirmative
+
+The restricted active-domain D_A contains only canonical sentences satisfying declared conditions:
+
+- one grammatical subject;
+- one direct object;
+- one transitive predicate;
+- explicitly declared tense/aspect;
+- declarative polarity;
+- no unresolved pronoun;
+- no ellipsis affecting semantic roles;
+- no coordinated subject or object;
+- no omitted semantic agent;
+- unambiguous agent/patient assignment.
+
+The transformation is:
+
+T_AP : D_A -> D_P
+
+where D_P is the corresponding restricted canonical passive domain.
+
+Within this declared canonical domain:
+
+Agent_y = Agent_x
+Patient_y = Patient_x
+P_y = P_x
+Tense_y = Tense_x
+Aspect_y = Aspect_x
+Polarity_y = Polarity_x
+
+Therefore, relative to the declared interpretation model:
+
+I_int(T_AP(x),c) = I_int(x,c)
+
+This is a derived result of the formal model, not an empirical discovery.
+
+A corresponding passive-to-active transformation T_PA can be defined on the canonical passive domain.
+
+If the canonicalization rules are sufficiently restrictive and the agent is explicitly represented, then:
+
+T_PA(T_AP(x)) = x
+
+for x in D_A.
+
+This establishes reversibility only on the declared restricted domain.
+
+It must not be generalized to arbitrary natural-language sentences.
+
+For example, if the agent is omitted:
+
+"The device was tested."
+
+then different active sentences such as:
+
+"The engineer tested the device."
+
+"The technician tested the device."
+
+may map to the same passive surface form.
+
+The transformation is then non-injective with respect to the omitted agent information, and exact recovery of the original sentence is impossible from the passive sentence alone.
+
+This illustrates a general principle:
+
+information not represented in the output cannot be recovered from the output alone without additional information.
+
+Human semantic equivalence is not established by this formal example.
+
+Physical implementation is not established by this formal example.
+
+Computational advantage is not established by this formal example.
+
+The test therefore functions as a methodological demonstration of how a linguistic transformation can be specified, constrained, and evaluated.
+
+It is not presented as a new linguistic theorem or as experimental validation of RI.
+
+9.11. METHODOLOGICAL STOP CRITERION
+
+The formal framework deliberately introduces a stop criterion.
+
+If a proposed RI claim can only be supported by adding another internally selected:
+
+- mathematical representation;
+- transformation;
+- parameter set;
+- simulation;
+- interpretation model;
+- numerical optimization;
+
+without introducing independent experimental evidence or independently established external evidence, the claim remains a model-level result.
+
+Repeated internal modelling does not convert a model into an experiment.
+
+Therefore, after the formal consistency of a claim has been established, further mathematical constructions should not be treated as additional physical evidence unless they introduce an independently testable prediction or resolve a previously identified empirical uncertainty.
+
+This criterion prevents an open-ended sequence of self-confirming simulations.
+
+9.12. SIMULATION VERSUS EXPERIMENT
+
+Numerical simulation can establish properties of the selected mathematical or physical model.
+
+It cannot, by itself, establish that the model correctly describes an experimental device.
+
+For RI, simulation results must therefore be identified as:
+
+MODEL RESULT
+
+unless independently validated experimentally.
+
+An earlier frequency sweep over approximately 70–130 THz for a particular modeled geometry produced a maximum transmission near 128.69 THz rather than at 100 THz.
+
+The significance of this result is methodological:
+
+100 THz must not be presented as an intrinsic optimum merely because it was previously selected as an example frequency.
+
+The approximately 128.69 THz result is a result of the specified model and geometry.
+
+It is not experimental evidence for a physical 128.69 THz optimum.
+
+This negative result is retained because it demonstrates that the model is not being retrospectively fitted to preserve a predetermined frequency.
+
+9.13. APPLICATION TO THE RI PHYSICAL ARCHITECTURE
+
+The physical RI architecture described in earlier sections includes electromagnetic evolution, coherent optical fields, phase-conjugation concepts, structural constraints, thermal constraints, and the VEK/ROK framework.
+
+Section 9 does not replace that architecture.
+
+Instead, it defines the conditions under which a linguistic or informational operation could be mapped onto a physical implementation.
+
+A complete physical mapping would require at least:
+
+1. definition of the information state;
+2. encoding into physical variables;
+3. state preparation;
+4. physical transformation;
+5. measurement;
+6. decoding;
+7. recovery or correctness metric;
+8. optical loss and noise characterization;
+9. energy and latency accounting;
+10. comparison with a defined baseline.
+
+The formal operator (-Y) cannot be treated as a substitute for this complete chain.
+
+Similarly, the existence of a reversible informational mapping does not establish that the corresponding hardware implementation is reversible, lossless, thermodynamically ideal, or computationally advantageous.
+
+9.14. ASSUMPTIONS AND LIMITATIONS REGISTER
+
+The following assumptions and limitations must remain explicitly identified:
+
+- ideal or near-ideal phase conjugation;
+- lossless or reduced-loss transformations where assumed;
+- ideal mathematical reversibility;
+- near-unitary evolution where assumed;
+- negligible logical irreversibility only under declared conditions;
+- simplified material parameters;
+- specified rather than universally valid thermal boundaries;
+- idealized or incomplete control models;
+- finite experimental fidelity;
+- nonzero optical loss;
+- nonzero coupling and detection losses;
+- pump and control power requirements;
+- fabrication tolerances;
+- phase noise;
+- thermal accumulation;
+- finite propagation and feedback latency;
+- finite measurement accuracy;
+- incomplete knowledge of the full system state.
+
+Each such assumption limits the strength of the corresponding conclusion.
+
+9.15. WHAT RI DOES NOT CLAIM
+
+RI does not claim:
+
+1. zero-energy computation;
+2. elimination of thermodynamic constraints;
+3. that mathematical reversibility is equivalent to physical reversibility;
+4. that phase conjugation constitutes complete physical time reversal;
+5. that a visible-wavelength phase-conjugation experiment establishes operation at 100 THz;
+6. that 100 THz is a fundamental optimum;
+7. that unitary mathematics guarantees lossless hardware;
+8. that VEK-to-ROK represents an experimentally established physical phase transition;
+9. that simulation constitutes experimental validation;
+10. that a formal language transformation establishes human semantic preservation;
+11. that a linguistic transformation is automatically implemented by an optical phase-conjugation operator;
+12. that optical reversibility eliminates all energy consumption;
+13. that RI is superior to conventional computing without quantitative baseline comparison;
+14. that computational advantage has been established where it has not been experimentally demonstrated.
+
+These limitations are part of the scientific definition of the project and are not disclaimers added after the fact.
+
+9.16. REPRODUCIBILITY REQUIREMENTS
+
+Any numerical or experimental result presented as supporting RI should preserve sufficient information for independent reproduction.
+
+For numerical work, this includes, where applicable:
+
+- software and version;
+- equations;
+- geometry;
+- material parameters;
+- boundary conditions;
+- source definitions;
+- mesh or discretization;
+- convergence criteria;
+- parameter ranges;
+- sweep resolution;
+- output metrics;
+- numerical tolerances;
+- raw or sufficiently detailed output data.
+
+For experiments, this includes, where applicable:
+
+- optical source;
+- wavelength and operating mode;
+- power levels;
+- beam geometry;
+- polarization;
+- nonlinear medium;
+- material and orientation;
+- optical components;
+- detector specifications;
+- calibration method;
+- measurement procedure;
+- control conditions;
+- uncertainty estimates;
+- raw measurement data.
+
+Results should remain traceable to their originating model or measurement.
+
+9.17. NEGATIVE-RESULT PRINCIPLE
+
+Negative results are retained when they constrain the interpretation of RI.
+
+A negative result is not evidence that the entire RI architecture is impossible.
+
+It is evidence against a specific tested proposition under the specified conditions.
+
+For example:
+
+- failure to obtain sufficient phase-conjugation fidelity would challenge the proposed physical implementation under the tested conditions;
+- failure of state recovery would challenge the corresponding reversibility claim;
+- absence of computational advantage would challenge the claimed engineering benefit;
+- failure of a VEK/ROK model to predict measured constraint behavior would challenge the usefulness of that model;
+- a frequency sweep that does not reproduce a previously assumed optimum rejects the assumption that the optimum is intrinsic.
+
+No negative result may be silently removed merely because it conflicts with an expected outcome.
+
+9.18. FINAL SCIENTIFIC STATUS
+
+The RI framework, as documented in this White Book, should be classified as:
+
+A physically constrained, quantitatively formulated, experimentally testable engineering hypothesis.
+
+The following components have different epistemic status:
+
+- mathematical definitions: formal;
+- algebraic consequences: derived mathematically within the declared model;
+- numerical simulations: model results;
+- physical phase-conjugation capability: experimental question;
+- linguistic semantic preservation: task-dependent and potentially empirical;
+- system-level computational advantage: unestablished until quantitatively demonstrated;
+- scalability: unestablished until experimentally and/or engineering validated.
+
+This distinction is essential for accurate scientific communication.
+
+9.19. FINAL VALIDATION BOUNDARY
+
+The validation boundary of the RI project is therefore explicit.
+
+Mathematical formalization can establish internal consistency.
+
+Simulation can establish behavior predicted by a selected model.
+
+Physical experiment is required to establish whether the corresponding hardware behavior occurs.
+
+System-level measurement is required to establish engineering advantage.
+
+Independent comparison is required to establish superiority over a defined baseline.
+
+No single layer substitutes for the others.
+
+The logical chain is therefore:
+
+MATHEMATICAL FORMALIZATION
+-> MODEL VALIDATION
+-> PHYSICAL EXPERIMENT
+-> SYSTEM MEASUREMENT
+-> BASELINE COMPARISON
+
+Only the evidence actually obtained at each layer may be used to support conclusions at that layer.
+
+9.20. SCIENTIFIC INTEGRITY STATEMENT
+
+The RI project does not require unsupported assumptions to be presented as established facts.
+
+Where a result is mathematical, it is identified as mathematical.
+
+Where a result is model-dependent, it is identified as a model result.
+
+Where physical behavior remains unmeasured, it is identified as an experimental requirement.
+
+Where engineering advantage has not been demonstrated, it is identified as unestablished.
+
+The purpose of this Section 9 is therefore not to prove RI by additional formal constructions.
+
+Its purpose is to define precisely what can be concluded, what cannot yet be concluded, and what evidence would be required to move a claim from mathematical formulation to physical validation and, ultimately, to engineering significance.
+
+This separation is a methodological requirement of the RI White Book.
+
+The project remains open to positive, negative, or inconclusive experimental results.
+
+A negative experimental result, if obtained under a valid and reproducible protocol, is considered scientifically valuable because it constrains the domain of validity of the RI hypothesis.
+
+FINAL STATUS:
+
+RI remains a physically constrained, quantitatively formulated, experimentally testable engineering hypothesis.
+
+No claim of complete physical reversibility, universal semantic preservation, zero-energy computation, or demonstrated computational superiority is made unless independently supported by appropriate evidence.
+
+
+
+
+
+
+
 
 
 
