@@ -22,7 +22,9 @@ Conditions for Further Development
 
 The development of RI must proceed incrementally, with each subsequent stage building on the results of the preceding completed stage. Further development of new architectural concepts will begin after the foundational tasks have been completed and their results evaluated.
 
-The necessary calculations and experimental procedures for the next stage of RI development have been prepared. Their publication on GitHub is deferred until a funding partner is secured who is willing to work alongside me on the further development of RI. The decision to publish these materials will be made in agreement with that partner as part of our collaborative development of the project.
+Preliminary computational approaches and plans for experimental procedures for the next stage of RI development have been prepared. Their implementation and validation will depend on the evaluation of the current stage and the definition of the next development objectives.
 
+The preparation of these approaches and plans does not imply that all calculations have been completed, that the experimental procedures have been validated, or that the next stage of development has begun.
 
+Publication of these materials on GitHub is deferred until a funding partner is secured who is willing to participate in the further development of RI. The decision to publish the materials will be made jointly with that partner as part of the collaborative development of the project.
 
